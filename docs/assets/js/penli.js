@@ -10,6 +10,7 @@ const lsb = document.querySelector('#lsb');
 const rsb = document.querySelector('#rsb');
 const gnbInner = document.querySelector('.gnb-inner');
 const menuBtns = document.querySelectorAll('.menu-btn');
+const sides = [...document.querySelectorAll('[data-target]')];
 
 // left-side-bar handler
 window.addEventListener('load', settingHandler);
@@ -29,38 +30,38 @@ function menuBtnHandler(ev){
             gnbInner.classList.remove('hide');
             gnbInner.classList.add('show');
         }
-        
     }
 }
 
 function sideMenuHandler(ev) {
     let target = ev.target;
-    if (target.dataset.target && target.dataset.target.slice(1) == lsb.id) {
-        if (rsb.classList.contains('show')) {
-            rsb.classList.remove('show');
-            rsb.classList.add('hide');
-            document.querySelector('[data-target="#rsb"]').innerHTML = `<i class="fas fa-bars"></i>`;
-        }
-        leftSideBarHandler.call(target);
-    } else if (target.dataset.target && target.dataset.target.slice(1) == rsb.id) {
-        if (lsb.classList.contains('show')) {
-            lsb.classList.remove('show');
-            lsb.classList.add('hide');
-            document.querySelector('[data-target="#lsb"]').innerHTML = `<i class="fas fa-bars"></i>`;
-        }
-        rightSideBarHandler.call(target);
-    } else if(target.offsetParent.className !== 'position-sticky' && target.offsetParent.id != lsb.id && target.offsetParent.id != rsb.id) {
-        lsb.classList.remove('show');
-        lsb.classList.add('hide');
-        rsb.classList.remove('show');
-        rsb.classList.add('hide');
-        document.querySelector('[data-target="#lsb"]').innerHTML = `<i class="fas fa-bars"></i>`;
-        document.querySelector('[data-target="#rsb"]').innerHTML = `<i class="fas fa-bars"></i>`;
+    let found = sides.indexOf(target);
+
+    if(!target.closest('[data-side-bar]') && !target.dataset.target){
+        sides.forEach(side=>{
+            let all = side.dataset.target.slice(1);
+            document.getElementById(all).classList.remove('show');
+            document.getElementById(all).classList.add('hide');
+        });
+    }
+
+    if(found==-1 || !document.getElementById(sides[found].dataset.target.slice(1)).classList.contains('built-in')) return;
+
+    let targetSide = document.getElementById(sides[found].dataset.target.slice(1));
+    if(targetSide.classList.contains('show')){
+        targetSide.classList.remove('show');
+        targetSide.classList.add('hide');
+    } else if(targetSide.classList.contains('hide')){
+        targetSide.classList.remove('hide');
+        targetSide.classList.add('show');
     }
 }
 
 function settingHandler() {
     let target = document.querySelectorAll('.side-bar');
+    let changeTag = null;
+    let ta = null;
+    let copyType = '';
     if(!target) return;
     for(let t of target){
         t.querySelector('[class*=position-]').style.top = `${t.getBoundingClientRect().top}px`;
@@ -74,13 +75,57 @@ function settingHandler() {
         msg.addEventListener('mouseleave', popLeaveHandler.bind(msg, st));
     });
 
-    document.querySelectorAll('code[data-code]').forEach(code=>{
-        let ta = document.createElement('textarea');
-        ta.value = ''
-        code.removeAttribute('data-code');
-        code.innerText = code.innerHTML;
-        code.parentNode.style.height = code.clientHeight+'px';
-    })
+    document.querySelectorAll('[data-code]').forEach(code=>{
+        let lines = code.innerHTML.split('\n');
+        lines.shift();
+        let indent = 0;
+
+        for(let line of lines[0].split('')){
+            if(line==' '){
+                indent++;
+            } else {
+                break;
+            }
+        }
+
+        lines = lines.map(line=>{
+            let regex = `\\s{${indent}}`;
+            let lineAtStart = line.replace(new RegExp(regex,'g'), '');
+            return lineAtStart;
+        });
+
+        ta = document.createElement('textarea');
+        ta.value = lines.join('\n');
+        changeTag = document.createElement('div');
+        let attrs = code.getAttributeNames();
+        attrs.forEach(attr=>{
+            changeTag.setAttribute(attr, code.getAttribute(attr));
+        });
+        let type = changeTag.getAttribute('data-code');
+        if(type=='') {
+            changeTag.dataset.code = 'html';
+            type = 'html';
+        };
+        changeTag.style.cssText = `--pl-code-type: "${type}"`;
+        copyType = type;
+        changeTag.innerText = ta.value.trim();
+        code.insertAdjacentElement('beforebegin', changeTag);
+        code.remove();
+    });
+    window.addEventListener('click', copyHandler.bind(changeTag, ta, copyType));
+}
+
+function copyHandler(ta, type, ev){
+    let target = ev.target;
+    if(!target.dataset.copyable || target.dataset.copyable !== 'true') return;
+    if(target.dataset.copyable=='true'){
+        let text = ta.value.trim();
+        navigator.clipboard.writeText(text);
+        target.style.cssText = `--pl-code-type: "done"; border: 1px solid rgba(var(--pl-info-rgb-3), 1); background-color: rgba(var(--pl-info-rgb-5), .2);`;
+        setTimeout(()=>{
+            target.style.cssText = `--pl-code-type: "${type}";`;
+        }, 3000);
+    }
 }
 
 function popEnterHandler(msg, st, ev){
@@ -90,34 +135,7 @@ function popEnterHandler(msg, st, ev){
         }
     `;
     document.head.append(st);
-    // this.setAttribute('style', `--pop-msg: "${msg}"`);
-    // this.style.cssText = `--pop-msg: "${msg}";`;
 }
 function popLeaveHandler(st, ev){
     st.remove();
 }
-
-function leftSideBarHandler() {
-    if (lsb.classList.contains('hide')) {
-        lsb.classList.remove('hide');
-        lsb.classList.add('show');
-        this.innerHTML = `<i class="fas fa-times"></i>`;
-    } else if (lsb.classList.contains('show')) {
-        lsb.classList.remove('show');
-        lsb.classList.add('hide');
-        this.innerHTML = `<i class="fas fa-bars"></i>`;
-    }
-}
-
-function rightSideBarHandler() {
-    if (rsb.classList.contains('hide')) {
-        rsb.classList.remove('hide');
-        rsb.classList.add('show');
-        this.innerHTML = `<i class="fas fa-times"></i>`;
-    } else if (rsb.classList.contains('show')) {
-        rsb.classList.remove('show');
-        rsb.classList.add('hide');
-        this.innerHTML = `<i class="fas fa-bars"></i>`;
-    }
-}
-// left-side-bar handler

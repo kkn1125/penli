@@ -16,10 +16,7 @@
         <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
         <link rel="manifest" href="/manifest.json">
-
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+        
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,11 +30,11 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
             rel="stylesheet">
-        <title>Penli</title>
+        <title>Penli : Button</title>
     </head>
 
     <body>
-        <nav class="gnb position-sticky bg-light us-none gnb-dark">
+        <nav class="gnb position-sticky bg-light us-none gnb-info">
             <div class="gnb-inner gnb-expand-md hide align-items-center">
                 <div class="brand fw-bold">
                     <a href="/index.html">Penli</a>
@@ -119,12 +116,12 @@
             </aside>
             <!-- left side bar -->
 
-            <main class="col" style="background: linear-gradient(165deg, #f7f5fb 50%, #fff 50%)">
+            <main>
                 <div class="sr"></div>
                 <section class="fence-full">
                     <div class="">
                         <span class="h2">
-                            Penli Docs
+                            Button
                         </span>
                         <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="현재 버전은 v0.1.0입니다.">
                             ?
@@ -134,22 +131,110 @@
 
                 <div class="sr"></div>
 
-                <section class="fence-full" style="position: relative; min-height: 25rem; background-image: url(assets/images/bg01.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-                    <img data-ani="human" src="assets/images/people01.png" alt="" style="height: 7em; filter: invert(); opacity: 0.7; bottom:0; position: absolute; left: 50%; pointer-events: none;">
-                    <div class="w-flex">
-                        <span class="col h5 text-white" style="line-height: 1.5em">
-                            Penli는 Bootstrap을 자주 쓰는 버릇때문에 만들어졌습니다.
+                <section class="fence-full">
+                    <div class="">
+                        <span class="h5">
+                            Display
                         </span>
-                        <span class="col">
-                            <img src="" alt="">
+                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="w-*로 주요 display 속성을 설정합니다">
+                            ?
                         </span>
                     </div>
-                    
+                    <div class="notice notice-warning">
+                        Display는 w-* 속성으로 지정되어 있으며, 반응형에 맞게 클래스가 준비되어 있습니다.
+                    </div>
+                    <div class="sr"></div>
+                    <div>
+                        <code data-code="html" data-copyable="true" class="p-2 border border-1 border-light rounded-3">
+                            <div class="w-block">
+                                블록
+                                <div class="w-block">
+                                    블록
+                                </div>
+                            </div>
+                        </code>
+                    </div>
+                    <div class="hr my-3"></div>
+                    <div class="fs-5">종류</div>
+                    <div class="fw-bold">
+                        <div class="sr"></div>
+                        <span class="w-inline card p-3">
+                            w-inline-block
+                        </span>
+                        <div class="sc"></div>
+                        <span class="w-inline-block card p-3">
+                            w-inline-block
+                        </span>
+                        <span class="w-inline-flex card p-3 gx-1">
+                            <span>w</span>
+                            <span>inline</span>
+                            <span>flex</span>
+                        </span>
+                        <div class="card p-3 mt-3">
+                            w-block
+                        </div>
+                        <div class="w-flex card p-3 mt-3">
+                            <span class="gx-1">w</span>
+                            <span class="gx-1">flex</span>
+                        </div>
+                    </div>
                 </section>
 
                 <div class="sr"></div>
 
-                
+                <section class="fence-full">
+                    <div class="">
+                        <span class="h5">
+                            Card
+                        </span>
+                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="카드를 쉽고 빠르게 조정하는 클래스입니다.">
+                            ?
+                        </span>
+                    </div>
+                    <div class="card-group g-1 card-dv-2 card-dv-md-3 card-dv-lg-auto card-pd-3 card-light card-border-1 card-border-gray">
+                        <div class="card">
+                            <div class="card-title">단양 축제</div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                </div>
+                            </div>
+                            <a href="#" class="card-link">link</a>
+                            <time class="card-time">2021. 11. 14</time>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">고성 공룡 발자국</div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quaerat, provident!
+                                </div>
+                            </div>
+                            <a href="#" class="card-link">link</a>
+                            <time class="card-time">2021. 11. 14</time>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">진주 개천예술제</div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                </div>
+                            </div>
+                            <a href="#" class="card-link">link</a>
+                            <time class="card-time">2021. 11. 14</time>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">대구 성산 축제</div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                </div>
+                            </div>
+                            <a href="#" class="card-link">link</a>
+                            <time class="card-time">2021. 11. 14</time>
+                        </div>
+                    </div>
+                </section>
             </main>
 
             <!-- right side bar -->
