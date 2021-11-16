@@ -9,11 +9,11 @@
  */
 
 :root {
-    --wm-brand: #7FED30;
-    --wm-primary: #41493A;
-    --wm-secondary: #A5AE9D;
-    --wm-subpoint: #009ED4;
-    --wm-point: #00D6FF;
+    --wm-brand: #CF81EF;
+    --wm-primary: #00524B;
+    --wm-secondary: #5FBAB0;
+    --wm-subpoint: #FF7336;
+    --wm-point: #6B238C;
     --wm-dark: #1b1b1b;
     --wm-light: #dddddd;
     --wm-gray-0: #363636;
@@ -31,10 +31,12 @@
     --wm-inherit: inherit;
 
     --wm-ghost-rgb: 255, 255, 255, 0;
-
-    --wm-brand-r: 127;
-    --wm-brand-g: 237;
-    --wm-brand-b: 48;
+    --qwe: rgb(95, 186, 176);
+    --qwe: rgb(255, 115, 54);
+    --qwe: rgb(107, 35, 140);
+    --wm-brand-r: 207;
+    --wm-brand-g: 129;
+    --wm-brand-b: 239;
     --wm-brand-rgb: var(--wm-brand-r), var(--wm-brand-g), var(--wm-brand-b);
     --wm-brand-rgb-1: calc(var(--wm-brand-r) + 10), calc(var(--wm-brand-g) + 10), calc(var(--wm-brand-b) + 10);
     --wm-brand-rgb-2: calc(var(--wm-brand-r) + 20), calc(var(--wm-brand-g) + 20), calc(var(--wm-brand-b) + 20);
@@ -42,9 +44,9 @@
     --wm-brand-rgb-4: calc(var(--wm-brand-r) + 40), calc(var(--wm-brand-g) + 40), calc(var(--wm-brand-b) + 40);
     --wm-brand-rgb-5: calc(var(--wm-brand-r) + 50), calc(var(--wm-brand-g) + 50), calc(var(--wm-brand-b) + 50);
 
-    --wm-primary-r: 65;
-    --wm-primary-g: 73;
-    --wm-primary-b: 58;
+    --wm-primary-r: 0;
+    --wm-primary-g: 82;
+    --wm-primary-b: 75;
     --wm-primary-rgb: var(--wm-primary-r), var(--wm-primary-g), var(--wm-primary-b);
     --wm-primary-rgb-1: calc(var(--wm-primary-r) + 10), calc(var(--wm-primary-g) + 10), calc(var(--wm-primary-b) + 10);
     --wm-primary-rgb-2: calc(var(--wm-primary-r) + 20), calc(var(--wm-primary-g) + 20), calc(var(--wm-primary-b) + 20);
@@ -52,9 +54,9 @@
     --wm-primary-rgb-4: calc(var(--wm-primary-r) + 40), calc(var(--wm-primary-g) + 40), calc(var(--wm-primary-b) + 40);
     --wm-primary-rgb-5: calc(var(--wm-primary-r) + 50), calc(var(--wm-primary-g) + 50), calc(var(--wm-primary-b) + 50);
 
-    --wm-secondary-r: 165;
-    --wm-secondary-g: 174;
-    --wm-secondary-b: 157;
+    --wm-secondary-r: 95;
+    --wm-secondary-g: 186;
+    --wm-secondary-b: 176;
     --wm-secondary-rgb: var(--wm-secondary-r), var(--wm-secondary-g), var(--wm-secondary-b);
     --wm-secondary-rgb-1: calc(var(--wm-secondary-r) + 10), calc(var(--wm-secondary-g) + 10), calc(var(--wm-secondary-b) + 10);
     --wm-secondary-rgb-2: calc(var(--wm-secondary-r) + 20), calc(var(--wm-secondary-g) + 20), calc(var(--wm-secondary-b) + 20);
@@ -62,9 +64,9 @@
     --wm-secondary-rgb-4: calc(var(--wm-secondary-r) + 40), calc(var(--wm-secondary-g) + 40), calc(var(--wm-secondary-b) + 40);
     --wm-secondary-rgb-5: calc(var(--wm-secondary-r) + 50), calc(var(--wm-secondary-g) + 50), calc(var(--wm-secondary-b) + 50);
 
-    --wm-subpoint-r: 0;
-    --wm-subpoint-g: 158;
-    --wm-subpoint-b: 212;
+    --wm-subpoint-r: 255;
+    --wm-subpoint-g: 115;
+    --wm-subpoint-b: 54;
     --wm-subpoint-rgb: var(--wm-subpoint-r), var(--wm-subpoint-g), var(--wm-subpoint-b);
     --wm-subpoint-rgb-1: calc(var(--wm-subpoint-r) + 10), calc(var(--wm-subpoint-g) + 10), calc(var(--wm-subpoint-b) + 10);
     --wm-subpoint-rgb-2: calc(var(--wm-subpoint-r) + 20), calc(var(--wm-subpoint-g) + 20), calc(var(--wm-subpoint-b) + 20);
@@ -72,9 +74,9 @@
     --wm-subpoint-rgb-4: calc(var(--wm-subpoint-r) + 40), calc(var(--wm-subpoint-g) + 40), calc(var(--wm-subpoint-b) + 40);
     --wm-subpoint-rgb-5: calc(var(--wm-subpoint-r) + 50), calc(var(--wm-subpoint-g) + 50), calc(var(--wm-subpoint-b) + 43);
 
-    --wm-point-r: 0;
-    --wm-point-g: 214;
-    --wm-point-b: 255;
+    --wm-point-r: 107;
+    --wm-point-g: 35;
+    --wm-point-b: 140;
     --wm-point-rgb: var(--wm-point-r), var(--wm-point-g), var(--wm-point-b);
     --wm-point-rgb-1: calc(var(--wm-point-r) + 10), calc(var(--wm-point-g) + 10), calc(var(--wm-point-b) + 0);
     --wm-point-rgb-2: calc(var(--wm-point-r) + 20), calc(var(--wm-point-g) + 20), calc(var(--wm-point-b) + 0);
@@ -3717,6 +3719,30 @@ body {
 
 .card-info .card {
     --card-bg: var(--wm-info-rgb-4);
+}
+
+.card-brand {
+    --card-bg: var(--wm-brand-rgb-4) !important;
+}
+
+.card-brand .card {
+    --card-bg: var(--wm-brand-rgb-4);
+}
+
+.card-point {
+    --card-bg: var(--wm-point-rgb-4) !important;
+}
+
+.card-point .card {
+    --card-bg: var(--wm-point-rgb-4);
+}
+
+.card-subpoint {
+    --card-bg: var(--wm-subpoint-rgb-4) !important;
+}
+
+.card-subpoint .card {
+    --card-bg: var(--wm-subpoint-rgb-4);
 }
 
 .card-primary {
@@ -10002,6 +10028,36 @@ a {
     --wm-notice-color: var(--wm-gray-rgb);
     --wm-notice-bg: var(--wm-gray-rgb-4);
     --wm-notice-border: var(--wm-gray-rgb-3);
+}
+
+.notice-brand {
+    --wm-notice-color: var(--wm-brand-rgb-3);
+    --wm-notice-bg: calc(var(--wm-brand-r) + 150), calc(var(--wm-brand-g) + 150), calc(var(--wm-brand-b) + 150);
+    --wm-notice-border: var(--wm-brand-rgb-5);
+}
+
+.notice-primary {
+    --wm-notice-color: var(--wm-primary-rgb-3);
+    --wm-notice-bg: calc(var(--wm-primary-r) + 150), calc(var(--wm-primary-g) + 150), calc(var(--wm-primary-b) + 150);
+    --wm-notice-border: var(--wm-primary-rgb-5);
+}
+
+.notice-secondary {
+    --wm-notice-color: var(--wm-secondary-rgb-3);
+    --wm-notice-bg: calc(var(--wm-secondary-r) + 150), calc(var(--wm-secondary-g) + 150), calc(var(--wm-secondary-b) + 150);
+    --wm-notice-border: var(--wm-secondary-rgb-5);
+}
+
+.notice-point {
+    --wm-notice-color: var(--wm-point-rgb-3);
+    --wm-notice-bg: calc(var(--wm-point-r) + 150), calc(var(--wm-point-g) + 150), calc(var(--wm-point-b) + 150);
+    --wm-notice-border: var(--wm-point-rgb-5);
+}
+
+.notice-subpoint {
+    --wm-notice-color: var(--wm-subpoint-rgb-3);
+    --wm-notice-bg: calc(var(--wm-subpoint-r) + 150), calc(var(--wm-subpoint-g) + 150), calc(var(--wm-subpoint-b) + 150);
+    --wm-notice-border: var(--wm-subpoint-rgb-5);
 }
 
 .notice-info {
