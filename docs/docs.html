@@ -5,16 +5,16 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/traveler.css">
-        <link rel="stylesheet" href="assets/css/traveler.theme.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../assets/css/traveler.css">
+        <link rel="stylesheet" href="../assets/css/traveler.theme.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
             rel="stylesheet">
-
         <title>WithMe</title>
     </head>
 
@@ -22,7 +22,7 @@
         <nav class="gnb sticky bg-light us-none gnb-dark">
             <div class="gnb-inner gnb-expand-md hide align-items-center">
                 <div class="brand fw-bold text-point">
-                    <a href="index.html">WithMe</a>
+                    <a href="../index.html">WithMe</a>
                 </div>
                 <div class="menu-btn">
                     <button class="btn btn-light text-gray" data-target="#gnbMenu">
@@ -31,27 +31,12 @@
                 </div>
                 <ul id="gnbMenu" class="gnb-menu gx-2 w-flex">
                     <li>
-                        <a class="nav-link position-relative" href="#">
-                            이번 주 여행
-                            <span class="dot dot-2 dot-danger top-0 right-0 position-middle">+10</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">이번 달 여행</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">전국 관광</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">오늘 날씨</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="docs/docs.html">Docs</a>
+                        <a class="nav-link" href="docs.html">Docs</a>
                     </li>
                     <li class="search btn-bundle g-0">
                         <input type="text" class="form-input col">
                         <button class="btn btn-info">
-                            <i class="fas fa-search"></i> 
+                            <i class="fas fa-search"></i>
                         </button>
                     </li>
                 </ul>
@@ -61,59 +46,110 @@
             <div class="w-flex g-3">
                 <div class="col-10 text-start">
                     <button class="btn text-dark btn-focus-gray" data-target="#lsb">
-                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-bars"></i> Usage
                     </button>
                 </div>
                 <div class="col-10 text-end">
                     <button class="btn text-dark btn-focus-gray" data-target="#rsb">
-                        <i class="fas fa-bars"></i>
+                        Watcher <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
         </section>
-        <div class="main built-in">
-            <aside id="lsb" class="side-bar hide side-bar-size-2" data-side-bar="left">
+        <div class="main">
+            <aside id="lsb" class="side-bar" data-side-bar="left">
                 <div class="p-5 border flex-basis-100">
                     <div class="position-sticky">
                         <div class="menu-title text-uppercase mb-5 text-muted">
-                            Menu
+                            usage
                         </div>
                         <ul class="list-group">
                             <li class="list-item">
-                                <a href="#">test1</a>
+                                <a href="#">Display</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">test2</a>
+                                <a href="#">Sizing</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">test3</a>
+                                <a href="#">Position</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">test4</a>
+                                <a href="#">Card</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">test5</a>
+                                <a href="#">Area Fence</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">List</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Buttons</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Pop up</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Notice</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </aside>
-
             <main>
+                <div class="sr"></div>
+                <section class="fence-full">
+                    <div class="">
+                        <span class="h1">
+                            Penli.css Docs
+                        </span>
+                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="현재 버전은 v0.1.0입니다.">
+                            ?
+                        </span>
+                    </div>
+
+                    
+                </section>
 
                 <div class="sr"></div>
 
-                <section class="fence">
+                <section class="fence-full">
                     <div class="">
-                        <span class="h3">
-                            여기, 지금, 핫플
+                        <span class="h2">
+                            Display
                         </span>
-                        <span data-pop-type="msg" data-msg-dir="start" data-msg="현재 버전은 v0.1.0입니다.">
-                            test
+                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="w-*로 주요 display 속성을 설정합니다">
+                            ?
+                        </span>
+                    </div>
+                    <div class="notice notice-warning">
+                        Display는 w-* 속성으로 지정되어 있으며, 반응형에 맞게 클래스가 준비되어 있습니다.
+                    </div>
+                    <div>
+                        <pre class="border rounded-3 border-gray m-1">
+                            <code data-code class="p-3">
+                                <div class="w-block">
+                                    블록
+                                </div>
+                            </code>
+                        </pre>
+                        <div class="w-block">
+                            블록
+                        </div>
+                    </div>
+                </section>
+
+                <div class="sr"></div>
+
+                <section class="fence-full">
+                    <div class="">
+                        <span class="h2">
+                            Card
+                        </span>
+                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="카드를 쉽고 빠르게 조정하는 클래스입니다.">
+                            ?
                         </span>
                     </div>
                     <div class="card-group g-1 card-dv-2 card-dv-md-3 card-dv-lg-auto card-pd-3 card-light card-border-1 card-border-gray">
-                            
                         <div class="card">
                             <div class="card-title">단양 축제</div>
                             <div class="card-content">
@@ -128,7 +164,8 @@
                             <div class="card-title">고성 공룡 발자국</div>
                             <div class="card-content">
                                 <div class="card-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quaerat, provident!
                                 </div>
                             </div>
                             <a href="#" class="card-link">link</a>
@@ -154,60 +191,23 @@
                             <a href="#" class="card-link">link</a>
                             <time class="card-time">2021. 11. 14</time>
                         </div>
-                        
-                    </div>
-                </section>
-
-                <section class="area">
-                    <div class="">
-                        <span class="h3">
-                            이번 달, 11월의 축제는?
-                        </span>
                     </div>
                 </section>
                 <div class="sr"></div>
-
             </main>
-
-            <aside id="rsb" class="side-bar hide side-bar-size-1" data-side-bar="right">
-                <div class="p-5 border flex-basis-100">
-                    <div class="position-sticky">
-                        <div class="menu-title text-uppercase mb-5 text-muted">
-                            Menu
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-item">
-                                <a href="#">test1</a>
-                            </li>
-                            <li class="list-item">
-                                <a href="#">test2</a>
-                            </li>
-                            <li class="list-item">
-                                <a href="#">test3</a>
-                            </li>
-                            <li class="list-item">
-                                <a href="#">test4</a>
-                            </li>
-                            <li class="list-item">
-                                <a href="#">test5</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </aside>
-
         </div>
-        
+
+
         <footer class="footer bg-light p-3 w-flex fustify-content-start">
             <span class="brand text-white fw-bold">
                 <a href="index.html">WithMe</a>
             </span>
             <div class="w-flex justify-content-start ps-3 gx-3">
-                <div><a href="index.html" class="nav-link">Home</a></div>
-                <div><a href="docs/docs.html" class="nav-link">Docs</a></div>
+                <div><a href="../index.html" class="nav-link">Home</a></div>
+                <div><a href="docs.html" class="nav-link">Docs</a></div>
             </div>
         </footer>
-        <script src="assets/js/traveler.js"></script>
+        <script src="../assets/js/traveler.js"></script>
     </body>
 
 </html>
