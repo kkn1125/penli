@@ -20,33 +20,32 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/penli.css">
-        <link rel="stylesheet" href="assets/css/penli.theme.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
-            rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/penli.css">
+        <link rel="stylesheet" href="assets/css/penli.theme.css">
         <title>Penli : Display</title>
     </head>
 
     <body>
-        <nav class="gnb position-sticky bg-light us-none gnb-info">
+        <nav class="gnb position-sticky bg-light gnb-dark">
             <div class="gnb-inner gnb-expand-md hide align-items-center">
                 <div class="brand fw-bold">
-                    <a href="/index.html">Penli</a>
+                    <a href="index.html">Penli</a>
                 </div>
                 <div class="menu-btn">
-                    <button class="btn btn-light text-gray" data-target="#gnbMenu">
-                        <i class="fas fa-bars fa-2x"></i>
+                    <button class="btn btn-light text-gray fs-4" data-target="#gnbMenu" style="line-height: 1">
+                        <i class="fas fa-bars"></i>
                     </button>
                 </div>
                 <ul id="gnbMenu" class="gnb-menu gx-2 w-flex">
                     <li>
-                        <a class="nav-link" href="/index.html">Docs</a>
+                        <a class="nav-link" href="index.html">Docs</a>
                     </li>
                     <li class="search btn-bundle g-0">
                         <input type="text" class="form-input col">
@@ -78,37 +77,37 @@
             <!-- left side bar -->
             <aside id="lsb" class="side-bar hide" data-side-bar="left">
                 <div class="p-5 border flex-basis-100">
-                    <div class="position-sticky">
+                    <div class="position-static position-sticky-sm">
                         <div class="menu-title text-uppercase mb-5 text-muted">
                             usage
                         </div>
                         <ul class="list-group">
-                            <li class="list-item">
-                                <a href="/display.html">Display</a>
+                            <li class="list-item active">
+                                <a href="display.html">Display</a>
                             </li>
                             <li class="list-item">
-                                <a href="/sizing.html">Sizing</a>
+                                <a href="sizing.html">Sizing</a>
                             </li>
                             <li class="list-item">
-                                <a href="/position.html">Position</a>
+                                <a href="position.html">Position</a>
                             </li>
                             <li class="list-item">
-                                <a href="/card.html">Card</a>
+                                <a href="card.html">Card</a>
                             </li>
                             <li class="list-item">
-                                <a href="/area.html">Area Fence</a>
+                                <a href="area.html">Area Fence</a>
                             </li>
                             <li class="list-item">
-                                <a href="/list.html">List</a>
+                                <a href="list.html">List</a>
                             </li>
                             <li class="list-item">
-                                <a href="/button.html">Button</a>
+                                <a href="button.html">Button</a>
                             </li>
                             <li class="list-item">
-                                <a href="/pop.html">Pop up</a>
+                                <a href="pop.html">Pop up</a>
                             </li>
                             <li class="list-item">
-                                <a href="/notice.html">Notice</a>
+                                <a href="notice.html">Notice</a>
                             </li>
                         </ul>
                     </div>
@@ -123,28 +122,45 @@
                         <span class="h2">
                             Display
                         </span>
-                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="현재 버전은 v0.1.0입니다.">
-                            ?
-                        </span>
                     </div>
-                </section>
 
-                <div class="sr"></div>
-
-                <section class="fence-full">
                     <div class="">
                         <span class="h5">
-                            Display
+                            사용법
                         </span>
-                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="w-*로 주요 display 속성을 설정합니다">
+                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="w-*로 주요 display 속성을 설정합니다">
                             ?
                         </span>
                     </div>
-                    <div class="notice notice-warning">
-                        Display는 w-* 속성으로 지정되어 있으며, 반응형에 맞게 클래스가 준비되어 있습니다.
+                    <div class="notice notice-info">
+                        Display는 w-* 로 약속된 클래스 네이밍이 있으며, 반응형을 위해 사이즈 설정이 되어 있습니다.
                     </div>
-                    <div class="sr"></div>
-                    <div>
+                    
+                    <div class="h5">주요 클래스</div>
+                    <div class="pl-ex">
+                        <div class="fw-bold">
+                            <span class="w-inline card p-3">
+                                w-inline
+                            </span>
+                            <span class="sc"></span>
+                            <span class="w-inline-block card p-3">
+                                w-inline-block
+                            </span>
+                            <span class="w-inline-flex card p-3 gx-1">
+                                <span>w</span>
+                                <span>inline</span>
+                                <span>flex</span>
+                            </span>
+                            <div class="card p-3 mt-3">
+                                w-block
+                            </div>
+                            <div class="w-flex card p-3 mt-3">
+                                <span class="gx-1">w</span>
+                                <span class="gx-1">flex</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-wrap">
                         <code data-code="html" data-copyable="true" class="p-2 border border-1 border-light rounded-3">
                             <div class="w-block">
                                 블록
@@ -154,30 +170,6 @@
                             </div>
                         </code>
                     </div>
-                    <div class="hr my-3"></div>
-                    <div class="fs-5">종류</div>
-                    <div class="fw-bold">
-                        <div class="sr"></div>
-                        <span class="w-inline card p-3">
-                            w-inline-block
-                        </span>
-                        <div class="sc"></div>
-                        <span class="w-inline-block card p-3">
-                            w-inline-block
-                        </span>
-                        <span class="w-inline-flex card p-3 gx-1">
-                            <span>w</span>
-                            <span>inline</span>
-                            <span>flex</span>
-                        </span>
-                        <div class="card p-3 mt-3">
-                            w-block
-                        </div>
-                        <div class="w-flex card p-3 mt-3">
-                            <span class="gx-1">w</span>
-                            <span class="gx-1">flex</span>
-                        </div>
-                    </div>
                 </section>
 
                 <div class="sr"></div>
@@ -185,68 +177,58 @@
                 <section class="fence-full">
                     <div class="">
                         <span class="h5">
-                            Card
-                        </span>
-                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="카드를 쉽고 빠르게 조정하는 클래스입니다.">
-                            ?
+                            반응형 사이즈
                         </span>
                     </div>
-                    <div class="card-group g-1 card-dv-2 card-dv-md-3 card-dv-lg-auto card-pd-3 card-light card-border-1 card-border-gray">
-                        <div class="card">
-                            <div class="card-title">단양 축제</div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
-                                </div>
-                            </div>
-                            <a href="#" class="card-link">link</a>
-                            <time class="card-time">2021. 11. 14</time>
+                    <div class="notice notice-info">
+                        반응형에 맞게 클래스가 준비되어 있습니다. 너비를 기준으로 산정되고, 사이즈 기준은 Bootstrap이 사용하는 sm, md, lg, xl, xxl에 맞춰져 있습니다.
+                    </div>
+                    <div class="pl-ex">
+                        <div class="tag tag-info">Example</div>
+                        <div>
+                            <span class="w-md-none">
+                                <span>w-md-none</span>
+                                <span class="vr"></span>
+                                <span>768px 이상에서 사라집니다.</span>
+                            </span>
+                            <span class="w-md-block w-none">
+                                <span>w-md-block w-none</span>
+                                <span class="vr"></span>
+                                <span>768px 이하에서 사라집니다.</span>
+                            </span>
                         </div>
-                        <div class="card">
-                            <div class="card-title">고성 공룡 발자국</div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Quaerat, provident!
-                                </div>
-                            </div>
-                            <a href="#" class="card-link">link</a>
-                            <time class="card-time">2021. 11. 14</time>
-                        </div>
-                        <div class="card">
-                            <div class="card-title">진주 개천예술제</div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
-                                </div>
-                            </div>
-                            <a href="#" class="card-link">link</a>
-                            <time class="card-time">2021. 11. 14</time>
-                        </div>
-                        <div class="card">
-                            <div class="card-title">대구 성산 축제</div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
-                                </div>
-                            </div>
-                            <a href="#" class="card-link">link</a>
-                            <time class="card-time">2021. 11. 14</time>
-                        </div>
+                    </div>
+                    <div class="sr"></div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="p-2 border border-1 border-light rounded-3">
+                            <span class="w-md-none">
+                                <span>w-md-none</span>
+                                <span class="vr"></span>
+                                <span>768px 이상에서 사라집니다.</span>
+                            </span>
+                            <span class="w-md-block w-none">
+                                <span>w-md-block w-none</span>
+                                <span class="vr"></span>
+                                <span>768px 이하에서 사라집니다.</span>
+                            </span>
+                        </code>
                     </div>
                 </section>
+                
+                <div class="sr"></div>
+                
             </main>
 
             <!-- right side bar -->
             <aside id="rsb" class="side-bar built-in hide" data-side-bar="right">
                 <div class="p-5 border flex-basis-100">
-                    <div class="position-sticky">
+                    <div class="position-static position-sm-sticky">
                         <div class="menu-title text-uppercase mb-5 text-muted">
                             menu
                         </div>
                         <ul class="list-group">
                             <li class="list-item">
-                                <a href="/">home</a>
+                                <a href="index.html">home</a>
                             </li>
                             <li class="list-item">
                                 <a href="https://kkn1125.github.io/contact">mail to</a>

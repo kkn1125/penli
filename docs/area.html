@@ -29,7 +29,7 @@
         rel="stylesheet">
         <link rel="stylesheet" href="assets/css/penli.css">
         <link rel="stylesheet" href="assets/css/penli.theme.css">
-        <title>Penli : Button</title>
+        <title>Penli : Area & Fence</title>
     </head>
 
     <body>
@@ -94,13 +94,13 @@
                             <li class="list-item">
                                 <a href="card.html">Card</a>
                             </li>
-                            <li class="list-item">
+                            <li class="list-item active">
                                 <a href="area.html">Area Fence</a>
                             </li>
                             <li class="list-item">
                                 <a href="list.html">List</a>
                             </li>
-                            <li class="list-item active">
+                            <li class="list-item">
                                 <a href="button.html">Button</a>
                             </li>
                             <li class="list-item">
@@ -120,141 +120,117 @@
                 <section class="fence-full">
                     <div class="">
                         <span class="h2">
-                            Button
+                            Area & Fence
                         </span>
                     </div>
                 
                     <div class="">
                         <span class="h5">
-                            기본 버튼
+                            Area
                         </span>
-                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="기본 button 태그와 Penli의 기본 버튼 설정">
+                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="컨텐츠를 감싸는 역할을 하며 화면의 크기에 따라 비율을 맞춥니다. margin 속성으로 조정됩니다.">
                             ?
                         </span>
                     </div>
+                    <div class="notice notice-info">
+                        컨텐츠를 감싸는 역할을 하며 화면의 크기에 따라 비율을 맞춥니다. <kbd class="bg-info">margin</kbd> 속성으로 조정됩니다.
+                    </div>
+                    
                     <div class="pl-ex">
-                        <button>기본 버튼</button>
-                        <button class="btn">Penli 기본 버튼</button>
+                        <div class="area bg-light">
+                            Area Contents
+                        </div>
+                        <div class="sr"></div>
+                        <div class="area-full bg-light">
+                            Area-full Contents
+                        </div>
                     </div>
                     <div class="code-wrap">
                         <code data-code="html" data-copyable="true" class="card border border-light">
-                            <button>기본 버튼</button>
-                            button class="btn">Penli 기본 버튼</button>
-                        </code>
-                    </div>
-                    <div class="sr"></div>
-                    <div class="">
-                        <span class="h5">
-                            채워진 버튼
-                        </span>
-                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="컬러가 채워진 기본 버튼 형식입니다.">
-                            ?
-                        </span>
-                    </div>
-                    <div class="pl-ex" style="background-image: url(https://cdn.pixabay.com/index/2021/11/16/06-30-56-841_1920x550.jpg); background-size: cover; background-repeat: no-repeat;">
-                        <button class="btn btn-info">info</button>
-                        <button class="btn btn-success">success</button>
-                        <button class="btn btn-danger">danger</button>
-                        <button class="btn btn-warning">warning</button>
-                        <button class="btn btn-brand">brand</button>
-                        <button class="btn btn-primary">primary</button>
-                        <button class="btn btn-secondary">secondary</button>
-                        <button class="btn btn-point">point</button>
-                        <button class="btn btn-subpoint">subpoint</button>
-                        <button class="btn btn-dark">dark</button>
-                        <button class="btn btn-gray">gray</button>
-                        <button class="btn btn-light">light</button>
-                        <button class="btn btn-white">white</button>
-                        <button class="btn btn-ghost">ghost</button>
-                    </div>
-                    <div class="code-wrap">
-                        <code data-code="html" data-copyable="true" class="card border border-light">
-                            <button class="btn btn-info">info</button>
-                            <button class="btn btn-success">success</button>
-                            <button class="btn btn-danger">danger</button>
-                            <button class="btn btn-warning">warning</button>
-                            <button class="btn btn-brand">brand</button>
-                            <button class="btn btn-primary">primary</button>
-                            <button class="btn btn-secondary">secondary</button>
-                            <button class="btn btn-point">point</button>
-                            <button class="btn btn-subpoint">subpoint</button>
-                            <button class="btn btn-dark">dark</button>
-                            <button class="btn btn-gray">gray</button>
-                            <button class="btn btn-light">light</button>
-                            <button class="btn btn-white">white</button>
-                            <button class="btn btn-ghost">ghost</button>
-                        </code>
-                    </div>
-
-                    <div class="sr"></div>
-                    <div class="">
-                        <span class="h5">
-                            프레임 버튼
-                        </span>
-                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="호버 시 컬러가 채워지는 변형 버튼 형식입니다.">
-                            ?
-                        </span>
-                    </div>
-                    <div class="pl-ex" style="background-image: url(https://cdn.pixabay.com/index/2021/11/16/06-30-56-841_1920x550.jpg); background-size: cover; background-repeat: no-repeat;">
-                        <button class="btn btn-frame-info">info</button>
-                        <button class="btn btn-frame-success">success</button>
-                        <button class="btn btn-frame-danger">danger</button>
-                        <button class="btn btn-frame-warning">warning</button>
-                        <button class="btn btn-frame-brand">brand</button>
-                        <button class="btn btn-frame-primary">primary</button>
-                        <button class="btn btn-frame-secondary">secondary</button>
-                        <button class="btn btn-frame-point">point</button>
-                        <button class="btn btn-frame-subpoint">subpoint</button>
-                        <button class="btn btn-frame-dark">dark</button>
-                        <button class="btn btn-frame-gray">gray</button>
-                        <button class="btn btn-frame-light">light</button>
-                        <button class="btn btn-frame-white">white</button>
-                        <button class="btn btn-frame-ghost">ghost</button>
-                    </div>
-                    <div class="code-wrap">
-                        <code data-code="html" data-copyable="true" class="card border border-light">
-                            <button class="btn btn-frame-info">info</button>
-                            <button class="btn btn-frame-success">success</button>
-                            <button class="btn btn-frame-danger">danger</button>
-                            <button class="btn btn-frame-warning">warning</button>
-                            <button class="btn btn-frame-brand">brand</button>
-                            <button class="btn btn-frame-primary">primary</button>
-                            <button class="btn btn-frame-secondary">secondary</button>
-                            <button class="btn btn-frame-point">point</button>
-                            <button class="btn btn-frame-subpoint">subpoint</button>
-                            <button class="btn btn-frame-dark">dark</button>
-                            <button class="btn btn-frame-gray">gray</button>
-                            <button class="btn btn-frame-light">light</button>
-                            <button class="btn btn-frame-white">white</button>
-                            <button class="btn btn-frame-ghost">ghost</button>
-                        </code>
-                    </div>
-
-                    <div class="sr"></div>
-                    <div class="">
-                        <span class="h5">
-                            버튼 사이즈
-                        </span>
-                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="총 3가지로 분류되며, 작은 sm size, 큰 lg size, 기본 중간 size가 있습니다.">
-                            ?
-                        </span>
-                    </div>
-                    <div class="pl-ex">
-                        <button class="btn btn-sm btn-info">작은 버튼</button>
-                        <button class="btn btn-info">기본 버튼</button>
-                        <button class="btn btn-lg btn-info">큰 버튼</button>
-                    </div>
-                    <div class="code-wrap">
-                        <code data-code="html" data-copyable="true" class="card border border-light">
-                            <button class="btn btn-sm btn-info">작은 버튼</button>
-                            <button class="btn btn-info">기본 버튼</button>
-                            <button class="btn btn-lg btn-info">큰 버튼</button>
+                            <div class="area bg-light">
+                                Area Contents
+                            </div>
+                            <div class="area-full bg-light">
+                                Area-full Contents
+                            </div>
                         </code>
                     </div>
                 </section>
                 
                 <div class="sr"></div>
 
+                <section class="fence-full">
+                    <div class="">
+                        <span class="h5">
+                            Fence
+                        </span>
+                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="Area와 같이 컨텐츠를 감싸는 역할을 하며 화면의 크기에 따라 비율을 맞춥니다. padding 속성으로 조정됩니다.">
+                            ?
+                        </span>
+                    </div>
+                    <div class="notice notice-info">
+                        컨텐츠를 감싸는 역할을 하며 화면의 크기에 따라 비율을 맞춥니다. <kbd class="bg-info">margin</kbd> 속성으로 조정됩니다.
+                    </div>
+                    
+                    <div class="pl-ex">
+                        <div class="fence bg-light">
+                            Fence Contents
+                        </div>
+                        <div class="sr"></div>
+                        <div class="fence-full bg-light">
+                            Fence-full Contents
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="fence bg-light">
+                                Fence Contents
+                            </div>
+                            <div class="fence-full bg-light">
+                                Fence-full Contents
+                            </div>
+                        </code>
+                    </div>
+                </section>
+                
+                <div class="sr"></div>
+
+                <section class="fence-full">
+                    <div class="">
+                        <span class="h5">
+                            Area, Fence 반응형
+                        </span>
+                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="Sizing 페이지의 화면 너비에 따라 조정됩니다.">
+                            ?
+                        </span>
+                    </div>
+                    <div class="notice notice-info">
+                        <kbd class="bg-info">area[-full]-size</kbd> | <kbd class="bg-info">fence[-full]-size</kbd>
+                    </div>
+                    
+                    <div class="pl-ex">
+                        <div class="fence fence-full-md bg-light">
+                            fence fence-full-md Contents
+                        </div>
+                        <div class="sr"></div>
+                        <div class="fence-full fence-lg bg-light">
+                            fence-full fence-lg Contents
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="fence bg-light">
+                                Fence-md Contents
+                            </div>
+                            <div class="fence-full bg-light">
+                                Fence-full-md Contents
+                            </div>
+                        </code>
+                    </div>
+                </section>
+
+                <div class="sr"></div>
+                
             </main>
 
             <!-- right side bar -->

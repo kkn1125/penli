@@ -20,33 +20,32 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/penli.css">
-        <link rel="stylesheet" href="assets/css/penli.theme.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
             integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
             rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/penli.css">
+        <link rel="stylesheet" href="assets/css/penli.theme.css">
         <title>Penli : Card</title>
     </head>
 
     <body>
-        <nav class="gnb position-sticky bg-light us-none gnb-info">
+        <nav class="gnb position-sticky bg-light us-none gnb-dark">
             <div class="gnb-inner gnb-expand-md hide align-items-center">
                 <div class="brand fw-bold">
-                    <a href="/index.html">Penli</a>
+                    <a href="index.html">Penli</a>
                 </div>
                 <div class="menu-btn">
-                    <button class="btn btn-light text-gray" data-target="#gnbMenu">
-                        <i class="fas fa-bars fa-2x"></i>
+                    <button class="btn btn-light text-gray fs-4" data-target="#gnbMenu" style="line-height: 1">
+                        <i class="fas fa-bars"></i>
                     </button>
                 </div>
                 <ul id="gnbMenu" class="gnb-menu gx-2 w-flex">
                     <li>
-                        <a class="nav-link" href="/index.html">Docs</a>
+                        <a class="nav-link" href="index.html">Docs</a>
                     </li>
                     <li class="search btn-bundle g-0">
                         <input type="text" class="form-input col">
@@ -78,37 +77,37 @@
             <!-- left side bar -->
             <aside id="lsb" class="side-bar hide" data-side-bar="left">
                 <div class="p-5 border flex-basis-100">
-                    <div class="position-sticky">
+                    <div class="position-static position-sticky-sm">
                         <div class="menu-title text-uppercase mb-5 text-muted">
                             usage
                         </div>
                         <ul class="list-group">
                             <li class="list-item">
-                                <a href="/display.html">Display</a>
+                                <a href="display.html">Display</a>
                             </li>
                             <li class="list-item">
-                                <a href="/sizing.html">Sizing</a>
+                                <a href="sizing.html">Sizing</a>
                             </li>
                             <li class="list-item">
-                                <a href="/position.html">Position</a>
+                                <a href="position.html">Position</a>
+                            </li>
+                            <li class="list-item active">
+                                <a href="card.html">Card</a>
                             </li>
                             <li class="list-item">
-                                <a href="/card.html">Card</a>
+                                <a href="area.html">Area Fence</a>
                             </li>
                             <li class="list-item">
-                                <a href="/area.html">Area Fence</a>
+                                <a href="list.html">List</a>
                             </li>
                             <li class="list-item">
-                                <a href="/list.html">List</a>
+                                <a href="button.html">Button</a>
                             </li>
                             <li class="list-item">
-                                <a href="/button.html">Button</a>
+                                <a href="pop.html">Pop up</a>
                             </li>
                             <li class="list-item">
-                                <a href="/pop.html">Pop up</a>
-                            </li>
-                            <li class="list-item">
-                                <a href="/notice.html">Notice</a>
+                                <a href="notice.html">Notice</a>
                             </li>
                         </ul>
                     </div>
@@ -123,116 +122,951 @@
                         <span class="h2">
                             Card
                         </span>
-                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="현재 버전은 v0.1.0입니다.">
+                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="카드아이템을 쉽고 빠르게 조정하는 클래스입니다.">
                             ?
                         </span>
                     </div>
-                </section>
 
-                <div class="sr"></div>
-
-                <section class="fence-full">
                     <div class="">
                         <span class="h5">
-                            Display
-                        </span>
-                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="w-*로 주요 display 속성을 설정합니다">
-                            ?
+                            사용법
                         </span>
                     </div>
                     <div class="notice notice-warning">
-                        Display는 w-* 속성으로 지정되어 있으며, 반응형에 맞게 클래스가 준비되어 있습니다.
+                        기본 <kbd class="bg-info">0.5rem</kbd> 간격이 띄어져 있습니다. <kbd class="bg-info">.card</kbd> 단일 혹은 <kbd class="bg-info">.card-group</kbd> 내에 위치하여도 같은 <kbd class="bg-info">.card</kbd> 스타일이 적용됩니다.
                     </div>
+
                     <div class="sr"></div>
-                    <div>
-                        <code data-code="html" data-copyable="true" class="p-2 border border-1 border-light rounded-3">
-                            <div class="w-block">
-                                블록
-                                <div class="w-block">
-                                    블록
+                    
+                    <div class="fs-4 fw-bold">Card Group</div>
+                    <div class="pl-ex">
+                        <div class="card-group">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
                                 </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="card-group">
+                                ...
                             </div>
                         </code>
                     </div>
-                    <div class="hr my-3"></div>
-                    <div class="fs-5">종류</div>
-                    <div class="fw-bold">
-                        <div class="sr"></div>
-                        <span class="w-inline card p-3">
-                            w-inline-block
-                        </span>
-                        <div class="sc"></div>
-                        <span class="w-inline-block card p-3">
-                            w-inline-block
-                        </span>
-                        <span class="w-inline-flex card p-3 gx-1">
-                            <span>w</span>
-                            <span>inline</span>
-                            <span>flex</span>
-                        </span>
-                        <div class="card p-3 mt-3">
-                            w-block
+
+                    <div class="sr"></div>
+
+                    <div class="fs-4 fw-bold">Card</div>
+                    <div class="pl-ex">
+                        <div class="card">
+                            <div class="card-title">Card Sample</div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                </div>
+                            </div>
+                            <a href="#" class="card-link">link</a>
+                            <time class="card-time">2021. 11. 14</time>
                         </div>
-                        <div class="w-flex card p-3 mt-3">
-                            <span class="gx-1">w</span>
-                            <span class="gx-1">flex</span>
+                    </div>
+                    <div class="sr"></div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </code>
+                    </div>
+
+                    <div class="sr"></div>
+
+                    <div class="fs-4 fw-bold">카드 개별 색상</div>
+                    <div class="pl-ex">
+                        <div class="card-group card-dv-4">
+                            <div class="card">
+                                <div class="card-title">card</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-brand">
+                                <div class="card-title">card-brand</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-primary">
+                                <div class="card-title">card-primary</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-secondary">
+                                <div class="card-title">card-secondary</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-point">
+                                <div class="card-title">card-point</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-subpoint">
+                                <div class="card-title">card-subpoint</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-info">
+                                <div class="card-title">card-info</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-success">
+                                <div class="card-title">card-success</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-danger">
+                                <div class="card-title">card-danger</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-warning">
+                                <div class="card-title">card-warning</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-light">
+                                <div class="card-title">card-light</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-ghost">
+                                <div class="card-title">card-ghost</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
                         </div>
+                    </div>
+                    <div class="sr"></div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="card card-info">
+                                <div class="card-title">card-info</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </code>
+                    </div>
+                </section>
+                <div class="sr"></div>
+
+                <section class="fence-full">
+                    <div>
+                        <span class="h6">전역/부분 스타일</span>
+                    </div>
+                    <blockquote class="blockquote">
+                        <kbd>card-group</kbd>이 적용된 곳에 같이 적용해야 하는 클래스들입니다.
+                    </blockquote>
+                    <div class="fs-4 fw-bold">
+                        카드 사이 간격
+                    </div>
+                    <div class="notice notice-warning">
+                        <kbd class="bg-info">g-1 ~ 6</kbd>까지 설정되어 있습니다.
+                    </div>
+                    <div class="pl-ex">
+                        <div class="fs-6 fw-bold">g-1</div>
+                        <div class="card-group g-1">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                        <div class="fs-6 fw-bold">g-2</div>
+                        <div class="card-group g-2">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                        <div class="fs-6 fw-bold">g-3</div>
+                        <div class="card-group g-3">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                        <div class="fs-6 fw-bold">g-4</div>
+                        <div class="card-group g-4">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                        <div class="fs-6 fw-bold">g-5</div>
+                        <div class="card-group g-5">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                        <div class="fs-6 fw-bold">g-6</div>
+                        <div class="card-group g-6">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="card-group g-*">
+                                cards ...
+                            </div>
+                        </code>
                     </div>
                 </section>
 
                 <div class="sr"></div>
 
                 <section class="fence-full">
-                    <div class="">
-                        <span class="h5">
-                            Card
-                        </span>
-                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="카드를 쉽고 빠르게 조정하는 클래스입니다.">
-                            ?
-                        </span>
+                    <div class="fs-4 fw-bold">
+                        카드 패딩
                     </div>
-                    <div class="card-group g-1 card-dv-2 card-dv-md-3 card-dv-lg-auto card-pd-3 card-light card-border-1 card-border-gray">
-                        <div class="card">
-                            <div class="card-title">단양 축제</div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
+                    <div class="notice notice-warning">
+                        <kbd class="bg-info">card-pd-*</kbd>로 사용합니다.
+                    </div>
+                    <div class="pl-ex">
+                        <div class="fs-6 fw-bold">card-pd-1</div>
+                        <div class="card-group card-pd-1">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+
+                        <div class="fs-6 fw-bold">card-pd-2</div>
+                        <div class="card-group card-pd-2">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+
+                        <div class="fs-6 fw-bold">card-pd-3</div>
+                        <div class="card-group card-pd-3">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+
+                        <div class="fs-6 fw-bold">card-pd-4</div>
+                        <div class="card-group card-pd-4">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+
+                        <div class="fs-6 fw-bold">card-pd-5</div>
+                        <div class="card-group card-pd-5">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+
+                        <div class="fs-6 fw-bold">card-pd-6</div>
+                        <div class="card-group card-pd-6">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="card-group card-pd-*">
+                                cards ...
+                            </div>
+                        </code>
+                    </div>
+                </section>
+
+                <div class="sr"></div>
+
+                <section class="fence-full">
+                    <div class="fs-4 fw-bold">
+                        카드 점유 개수
+                    </div>
+                    <div class="notice notice-warning">
+                        <kbd class="bg-info">card-dv-*</kbd>로 사용합니다. <kbd class="bg-info">auto</kbd>, <kbd class="bg-info">card-dv-0 ~ 10</kbd>까지 등분됩니다.
+                    </div>
+                    <div class="pl-ex">
+                        <div class="fs-6 fw-bold">card-dv-1</div>
+                        <div class="card-group card-dv-1">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                        <div class="fs-6 fw-bold">card-dv-2</div>
+                        <div class="card-group card-dv-2">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                        <div class="fs-6 fw-bold">card-dv-3</div>
+                        <div class="card-group card-dv-3">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                        ...
+                        <div class="fs-6 fw-bold">card-dv-10</div>
+                        <div class="card-group card-dv-10">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="card-group card-dv-*">
+                                cards ...
+                            </div>
+                        </code>
+                    </div>
+                </section>
+
+                <div class="sr"></div>
+
+                <section class="fence-full">
+                    <div class="fs-4 fw-bold">
+                        카드 전역 색상
+                    </div>
+                    <div class="notice notice-warning">
+                        <kbd class="bg-info">card-wrap</kbd>에 사용하면 전역 설정이 됩니다.
+                    </div>
+                    <div class="pl-ex">
+                        <div class="fs-6 fw-bold">card-info</div>
+                        <div class="card-group card-info">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                        <div class="fs-6 fw-bold">card-brand</div>
+                        <div class="card-group card-brand">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="card-group card-info">
+                                cards ...
+                            </div>
+                        </code>
+                    </div>
+                </section>
+
+                <div class="sr"></div>
+
+                <section class="fence-full">
+                    <div class="fs-4 fw-bold">
+                        카드 전역 테두리
+                    </div>
+                    <div class="notice notice-warning">
+                        <kbd class="bg-info">card-wrap</kbd>에 사용하면 전역 설정이 됩니다.
+                    </div>
+                    <div class="pl-ex">
+                        <div class="fs-6 fw-bold">card-border-danger</div>
+                        <div class="card-group card-border-danger">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                        <div class="fs-6 fw-bold">card-brand</div>
+                        <div class="card-group card-border-info">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="card-group card-border-info">
+                                cards ...
+                            </div>
+                        </code>
+                    </div>
+                </section>
+
+                <div class="sr"></div>
+
+                <section class="fence-full">
+                    <div class="fs-4 fw-bold">
+                        카드 일부 적용
+                    </div>
+                    <div class="notice notice-warning">
+                        <kbd class="bg-info">card-wrap</kbd> 또는 <kbd class="bg-info">card</kbd>에 사용하면 전역 또는 단일 설정이 가능하며, 단일 설정이 전역 설정보다 우선 적용됩니다.
+                    </div>
+                    <div class="pl-ex">
+                        <div class="fs-6 fw-bold">혼합 예제</div>
+                        <div class="card-group card-border-danger">
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card card-border-info card-success">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Card Sample</div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        text
+                                    </div>
+                                </div>
+                                <a href="#" class="card-link">link</a>
+                                <time class="card-time">2021. 11. 14</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="card-group card-border-danger">
+                                cards ...
+                                <div class="card card-border-info card-success">
+                                    <div class="card-title">Card Sample</div>
+                                    <div class="card-content">
+                                        <div class="card-body">
+                                            text
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-link">link</a>
+                                    <time class="card-time">2021. 11. 14</time>
                                 </div>
                             </div>
-                            <a href="#" class="card-link">link</a>
-                            <time class="card-time">2021. 11. 14</time>
-                        </div>
-                        <div class="card">
-                            <div class="card-title">고성 공룡 발자국</div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Quaerat, provident!
-                                </div>
-                            </div>
-                            <a href="#" class="card-link">link</a>
-                            <time class="card-time">2021. 11. 14</time>
-                        </div>
-                        <div class="card">
-                            <div class="card-title">진주 개천예술제</div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
-                                </div>
-                            </div>
-                            <a href="#" class="card-link">link</a>
-                            <time class="card-time">2021. 11. 14</time>
-                        </div>
-                        <div class="card">
-                            <div class="card-title">대구 성산 축제</div>
-                            <div class="card-content">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!
-                                </div>
-                            </div>
-                            <a href="#" class="card-link">link</a>
-                            <time class="card-time">2021. 11. 14</time>
-                        </div>
+                        </code>
                     </div>
                 </section>
             </main>
@@ -246,7 +1080,7 @@
                         </div>
                         <ul class="list-group">
                             <li class="list-item">
-                                <a href="/">home</a>
+                                <a href="index.html">home</a>
                             </li>
                             <li class="list-item">
                                 <a href="https://kkn1125.github.io/contact">mail to</a>

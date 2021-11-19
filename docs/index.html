@@ -23,16 +23,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/penli.css">
-        <link rel="stylesheet" href="assets/css/penli.theme.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
             integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
             rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/penli.css">
+        <link rel="stylesheet" href="assets/css/penli.theme.css">
         <title>Penli</title>
     </head>
 
@@ -40,16 +39,16 @@
         <nav class="gnb position-sticky bg-light us-none gnb-dark">
             <div class="gnb-inner gnb-expand-md hide align-items-center">
                 <div class="brand fw-bold">
-                    <a href="/index.html">Penli</a>
+                    <a href="index.html">Penli</a>
                 </div>
                 <div class="menu-btn">
-                    <button class="btn btn-light text-gray" data-target="#gnbMenu">
-                        <i class="fas fa-bars fa-2x"></i>
+                    <button class="btn btn-light text-gray fs-4" data-target="#gnbMenu" style="line-height: 1">
+                        <i class="fas fa-bars"></i>
                     </button>
                 </div>
                 <ul id="gnbMenu" class="gnb-menu gx-2 w-flex">
                     <li>
-                        <a class="nav-link" href="/index.html">Docs</a>
+                        <a class="nav-link" href="index.html">Docs</a>
                     </li>
                     <li class="search btn-bundle g-0">
                         <input type="text" class="form-input col">
@@ -81,37 +80,37 @@
             <!-- left side bar -->
             <aside id="lsb" class="side-bar hide" data-side-bar="left">
                 <div class="p-5 border flex-basis-100">
-                    <div class="position-sticky">
+                    <div class="position-static position-sticky-sm">
                         <div class="menu-title text-uppercase mb-5 text-muted">
                             usage
                         </div>
                         <ul class="list-group">
                             <li class="list-item">
-                                <a href="/display.html">Display</a>
+                                <a href="display.html">Display</a>
                             </li>
                             <li class="list-item">
-                                <a href="/sizing.html">Sizing</a>
+                                <a href="sizing.html">Sizing</a>
                             </li>
                             <li class="list-item">
-                                <a href="/position.html">Position</a>
+                                <a href="position.html">Position</a>
                             </li>
                             <li class="list-item">
-                                <a href="/card.html">Card</a>
+                                <a href="card.html">Card</a>
                             </li>
                             <li class="list-item">
-                                <a href="/area.html">Area Fence</a>
+                                <a href="area.html">Area Fence</a>
                             </li>
                             <li class="list-item">
-                                <a href="/list.html">List</a>
+                                <a href="list.html">List</a>
                             </li>
                             <li class="list-item">
-                                <a href="/button.html">Button</a>
+                                <a href="button.html">Button</a>
                             </li>
                             <li class="list-item">
-                                <a href="/pop.html">Pop up</a>
+                                <a href="pop.html">Pop up</a>
                             </li>
                             <li class="list-item">
-                                <a href="/notice.html">Notice</a>
+                                <a href="notice.html">Notice</a>
                             </li>
                         </ul>
                     </div>
@@ -119,14 +118,14 @@
             </aside>
             <!-- left side bar -->
 
-            <main class="col" style="background: linear-gradient(165deg, #f7f5fb 50%, #fff 50%)">
+            <main>
                 <div class="sr"></div>
                 <section class="fence-full">
                     <div class="">
                         <span class="h2">
                             Penli Docs
                         </span>
-                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="현재 버전은 v0.1.0입니다.">
+                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="현재 버전은 v0.1.1입니다.">
                             ?
                         </span>
                     </div>
@@ -135,20 +134,42 @@
                 <div class="sr"></div>
 
                 <section class="fence-full" style="position: relative; min-height: 25rem; background-image: url(assets/images/bg01.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-                    <img data-ani="human" src="assets/images/people01.png" alt="" style="height: 7em; filter: invert(); opacity: 0.7; bottom:0; position: absolute; left: 50%; pointer-events: none;">
+                    <img class="pe-none us-none" data-ani="human" src="assets/images/people01.png" alt="" style="height: 7em; filter: invert(); opacity: 0.7; bottom:0; position: absolute; left: 50%;" draggable="false">
                     <div class="w-flex">
-                        <span class="col h5 text-white" style="line-height: 1.5em">
-                            Penli는 Bootstrap을 자주 쓰는 버릇때문에 만들어졌습니다.
-                        </span>
-                        <span class="col">
-                            <img src="" alt="">
+                        <span class="col-15 h5 text-white" style="line-height: 1.5em">
+                            Penli는 Bootstrap의 네이밍에 기초합니다. 네이밍 외 속성 설정은 재량으로 한 것 임을 알립니다.
                         </span>
                     </div>
-                    
+                    <div class="btn-bundle">
+                        <button class="btn btn-frame-success">Install</button>
+                        <button class="btn btn-frame-warning">Docs</button>
+                    </div>
                 </section>
 
                 <div class="sr"></div>
 
+                <section class="fence-full">
+                    <span class="h5">
+                        CDN
+                    </span>
+                    <div class="blockquote blockquote-warning">
+                        코드를 클릭하시면 자동으로 복사됩니다.
+                    </div>
+                   
+                    <span class="h6">
+                        Select Version
+                        <select id="version" class="form-select">
+                            <option value="v011">v0.1.1</option>
+                            <option value="v010">v0.1.0</option>
+                        </select>
+                    </span>
+                    <div id="verText"></div>
+                    <div id="vresult">
+
+                    </div>
+
+                </section>
+                <div class="sr"></div>
                 
             </main>
 
@@ -161,7 +182,7 @@
                         </div>
                         <ul class="list-group">
                             <li class="list-item">
-                                <a href="/">home</a>
+                                <a href="index.html">home</a>
                             </li>
                             <li class="list-item">
                                 <a href="https://kkn1125.github.io/contact">mail to</a>
@@ -188,7 +209,7 @@
 
         <footer class="footer bg-light p-3 w-flex fustify-content-start">
             <span class="brand text-white fw-bold">
-                <a href="/index.html">Penli</a>
+                <a href="index.html">Penli</a>
             </span>
             <div class="w-flex justify-content-start ps-3 gx-3">
                 <div><a href="https://kkn1125.github.io/typer/" class="nav-link">type</a></div>

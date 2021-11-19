@@ -1,5 +1,5 @@
 /**!
- * withMe v0.1.0 (https://github.com/ohoraming/withMe)
+ * withMe v0.1.1 (https://github.com/ohoraming/withMe)
  * Copyright 2021 Authors (https://github.com/ohoraming/withMe/graphs/contributors) kkn1125, ohoraming
  * Licensed under MIT (https://github.com/ohoraming/withMe/blob/main/LICENSE)
  */
@@ -16,6 +16,16 @@ body {
 [data-ani]{
     animation: ani 1s;
     -webkit-animation: ani 1s;
+}
+
+.pl-ex{
+    border: 1px solid rgb(189, 189, 189);
+    padding: 2em;
+    border-radius: var(--pl-rounded-2);
+    -webkit-border-radius: var(--pl-rounded-2);
+    -moz-border-radius: var(--pl-rounded-2);
+    -ms-border-radius: var(--pl-rounded-2);
+    -o-border-radius: var(--pl-rounded-2);
 }
 
 @keyframes ani {

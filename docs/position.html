@@ -21,19 +21,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="assets/css/penli.css">
         <link rel="stylesheet" href="assets/css/penli.theme.css">
-        <title>Penli : Button</title>
+        <title>Penli : Position</title>
     </head>
 
     <body>
-        <nav class="gnb position-sticky bg-light gnb-dark">
+        <nav class="gnb position-sticky bg-light us-none gnb-dark">
             <div class="gnb-inner gnb-expand-md hide align-items-center">
                 <div class="brand fw-bold">
                     <a href="index.html">Penli</a>
@@ -88,7 +88,7 @@
                             <li class="list-item">
                                 <a href="sizing.html">Sizing</a>
                             </li>
-                            <li class="list-item">
+                            <li class="list-item active">
                                 <a href="position.html">Position</a>
                             </li>
                             <li class="list-item">
@@ -100,7 +100,7 @@
                             <li class="list-item">
                                 <a href="list.html">List</a>
                             </li>
-                            <li class="list-item active">
+                            <li class="list-item">
                                 <a href="button.html">Button</a>
                             </li>
                             <li class="list-item">
@@ -120,141 +120,53 @@
                 <section class="fence-full">
                     <div class="">
                         <span class="h2">
-                            Button
+                            Position
                         </span>
-                    </div>
-                
-                    <div class="">
-                        <span class="h5">
-                            기본 버튼
-                        </span>
-                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="기본 button 태그와 Penli의 기본 버튼 설정">
+                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="position-* 속성 설정">
                             ?
                         </span>
                     </div>
-                    <div class="pl-ex">
-                        <button>기본 버튼</button>
-                        <button class="btn">Penli 기본 버튼</button>
+
+                    <div class="fs-4 fw-bold">종류</div>
+                    <div class="pl-ex" style="position: relative; overflow: hidden;">
+                        <div class="bg-light position-static">position-static</div>
+                        <div class="bg-light position-relative start-50">position-relative start-50</div>
+                        <div class="bg-light position-absolute top-0 end-25">position-absolute  top-0 end-25</div>
+                        <div class="bg-light position-fixed end-25 top-25">position-fixed start-75</div>
+                        <div class="bg-light position-sticky bottom-0 start-0">position-sticky bottom-0 start-0</div>
                     </div>
                     <div class="code-wrap">
                         <code data-code="html" data-copyable="true" class="card border border-light">
-                            <button>기본 버튼</button>
-                            button class="btn">Penli 기본 버튼</button>
-                        </code>
-                    </div>
-                    <div class="sr"></div>
-                    <div class="">
-                        <span class="h5">
-                            채워진 버튼
-                        </span>
-                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="컬러가 채워진 기본 버튼 형식입니다.">
-                            ?
-                        </span>
-                    </div>
-                    <div class="pl-ex" style="background-image: url(https://cdn.pixabay.com/index/2021/11/16/06-30-56-841_1920x550.jpg); background-size: cover; background-repeat: no-repeat;">
-                        <button class="btn btn-info">info</button>
-                        <button class="btn btn-success">success</button>
-                        <button class="btn btn-danger">danger</button>
-                        <button class="btn btn-warning">warning</button>
-                        <button class="btn btn-brand">brand</button>
-                        <button class="btn btn-primary">primary</button>
-                        <button class="btn btn-secondary">secondary</button>
-                        <button class="btn btn-point">point</button>
-                        <button class="btn btn-subpoint">subpoint</button>
-                        <button class="btn btn-dark">dark</button>
-                        <button class="btn btn-gray">gray</button>
-                        <button class="btn btn-light">light</button>
-                        <button class="btn btn-white">white</button>
-                        <button class="btn btn-ghost">ghost</button>
-                    </div>
-                    <div class="code-wrap">
-                        <code data-code="html" data-copyable="true" class="card border border-light">
-                            <button class="btn btn-info">info</button>
-                            <button class="btn btn-success">success</button>
-                            <button class="btn btn-danger">danger</button>
-                            <button class="btn btn-warning">warning</button>
-                            <button class="btn btn-brand">brand</button>
-                            <button class="btn btn-primary">primary</button>
-                            <button class="btn btn-secondary">secondary</button>
-                            <button class="btn btn-point">point</button>
-                            <button class="btn btn-subpoint">subpoint</button>
-                            <button class="btn btn-dark">dark</button>
-                            <button class="btn btn-gray">gray</button>
-                            <button class="btn btn-light">light</button>
-                            <button class="btn btn-white">white</button>
-                            <button class="btn btn-ghost">ghost</button>
+                            <div class="bg-light position-static">position-static</div>
+                            <div class="bg-light position-relative start-50">position-relative start-50</div>
+                            <div class="bg-light position-absolute top-0 end-25">position-absolute  top-0 end-25</div>
+                            <div class="bg-light position-fixed end-25 top-25">position-fixed start-75</div>
+                            <div class="bg-light position-sticky bottom-0 start-0">position-sticky bottom-0 start-0</div>
                         </code>
                     </div>
 
-                    <div class="sr"></div>
-                    <div class="">
-                        <span class="h5">
-                            프레임 버튼
-                        </span>
-                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="호버 시 컬러가 채워지는 변형 버튼 형식입니다.">
-                            ?
-                        </span>
-                    </div>
-                    <div class="pl-ex" style="background-image: url(https://cdn.pixabay.com/index/2021/11/16/06-30-56-841_1920x550.jpg); background-size: cover; background-repeat: no-repeat;">
-                        <button class="btn btn-frame-info">info</button>
-                        <button class="btn btn-frame-success">success</button>
-                        <button class="btn btn-frame-danger">danger</button>
-                        <button class="btn btn-frame-warning">warning</button>
-                        <button class="btn btn-frame-brand">brand</button>
-                        <button class="btn btn-frame-primary">primary</button>
-                        <button class="btn btn-frame-secondary">secondary</button>
-                        <button class="btn btn-frame-point">point</button>
-                        <button class="btn btn-frame-subpoint">subpoint</button>
-                        <button class="btn btn-frame-dark">dark</button>
-                        <button class="btn btn-frame-gray">gray</button>
-                        <button class="btn btn-frame-light">light</button>
-                        <button class="btn btn-frame-white">white</button>
-                        <button class="btn btn-frame-ghost">ghost</button>
+                    <div class="fs-4 fw-bold">반응형</div>
+                    <div class="pl-ex" style="position: relative;">
+                        <div class="sr"></div>
+                        <div class="position-absolute-md bottom-75 bottom-xl-25 end-lg-50 end-25">
+                            <div class="card">
+                                position-absolute-md
+                            </div>
+                        </div>
                     </div>
                     <div class="code-wrap">
                         <code data-code="html" data-copyable="true" class="card border border-light">
-                            <button class="btn btn-frame-info">info</button>
-                            <button class="btn btn-frame-success">success</button>
-                            <button class="btn btn-frame-danger">danger</button>
-                            <button class="btn btn-frame-warning">warning</button>
-                            <button class="btn btn-frame-brand">brand</button>
-                            <button class="btn btn-frame-primary">primary</button>
-                            <button class="btn btn-frame-secondary">secondary</button>
-                            <button class="btn btn-frame-point">point</button>
-                            <button class="btn btn-frame-subpoint">subpoint</button>
-                            <button class="btn btn-frame-dark">dark</button>
-                            <button class="btn btn-frame-gray">gray</button>
-                            <button class="btn btn-frame-light">light</button>
-                            <button class="btn btn-frame-white">white</button>
-                            <button class="btn btn-frame-ghost">ghost</button>
-                        </code>
-                    </div>
-
-                    <div class="sr"></div>
-                    <div class="">
-                        <span class="h5">
-                            버튼 사이즈
-                        </span>
-                        <span class="tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="총 3가지로 분류되며, 작은 sm size, 큰 lg size, 기본 중간 size가 있습니다.">
-                            ?
-                        </span>
-                    </div>
-                    <div class="pl-ex">
-                        <button class="btn btn-sm btn-info">작은 버튼</button>
-                        <button class="btn btn-info">기본 버튼</button>
-                        <button class="btn btn-lg btn-info">큰 버튼</button>
-                    </div>
-                    <div class="code-wrap">
-                        <code data-code="html" data-copyable="true" class="card border border-light">
-                            <button class="btn btn-sm btn-info">작은 버튼</button>
-                            <button class="btn btn-info">기본 버튼</button>
-                            <button class="btn btn-lg btn-info">큰 버튼</button>
+                            <div class="position-absolute-md bottom-75 bottom-xl-25 end-lg-50 end-25">
+                                <div class="card">
+                                    position-absolute-md
+                                </div>
+                            </div>
                         </code>
                     </div>
                 </section>
-                
-                <div class="sr"></div>
 
+                <div class="sr"></div>
+                
             </main>
 
             <!-- right side bar -->
