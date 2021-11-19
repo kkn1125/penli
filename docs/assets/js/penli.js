@@ -11,14 +11,14 @@ const version = {
         v0.1.1입니다. 자세한 업데이트 내역은 <a href="https://github.com/kkn1125/penli#penli">링크</a>를 참조해주세요.
         </div>`,
     v011: {
-        css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@main/docs/assets/css/penli.css" integrity="sha384-fHGZz2rBr4tsAE8SKR5NEMRlpFwnFnWKuCneoloMjkMX1Vp9ze9mDotJRYW/V7pl" crossorigin="anonymous">`,
-        script: `&lt;script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@main/docs/assets/js/penli.js" integrity="sha384-6GB9pDB7DxtD1CZ79tt+1TAP3tE1lKK7rl1LYIdPG+UQoM8hF9am8LyycPr3LEcY" crossorigin="anonymous"></script>`,
-        choose: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@main/docs/assets/css/penli.theme.css" integrity="sha384-nl6/Lh/Xw3rO6POLQG2zOMEfA1dT9CpyY5tSuYKwkiseQmpZqWzd/8ka8N8KSLOk" crossorigin="anonymous">`,
+        css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv0.1.1/docs/assets/css/penli.css" integrity="sha384-7g0/efyrHKhHd4fpNcPfU698cG0Od+1MredmVZ2anqBQf/QA3gkvapp1CuOLARvY" crossorigin="anonymous">`,
+        script: `&lt;script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv0.1.1/docs/assets/js/penli.js" integrity="sha384-bOlrIoinKrqWcJ4ljPpn6qhrNhx9Yjs450HtZQSygtC/MFzf9I9uFxBPF9WUWXdm" crossorigin="anonymous"></script>`,
+        choose: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv0.1.1/docs/assets/css/penli.theme.css" integrity="sha384-24AgJQuKIw8eeQ18Xoo+5gC5yMAXvpYZ6GSKxn6p66OEv05NM5NupqF3+H+9ki9k" crossorigin="anonymous">`,
     },
     v010: {
-        css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@main/docs/assets/css/penli.css" integrity="sha384-fHGZz2rBr4tsAE8SKR5NEMRlpFwnFnWKuCneoloMjkMX1Vp9ze9mDotJRYW/V7pl" crossorigin="anonymous">`,
-        script: `&lt;script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@main/docs/assets/js/penli.js" integrity="sha384-6GB9pDB7DxtD1CZ79tt+1TAP3tE1lKK7rl1LYIdPG+UQoM8hF9am8LyycPr3LEcY" crossorigin="anonymous"></script>`,
-        choose: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@main/docs/assets/css/penli.theme.css" integrity="sha384-nl6/Lh/Xw3rO6POLQG2zOMEfA1dT9CpyY5tSuYKwkiseQmpZqWzd/8ka8N8KSLOk" crossorigin="anonymous">`,
+        css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@v0.1.0/docs/assets/css/penli.css" integrity="sha384-fHGZz2rBr4tsAE8SKR5NEMRlpFwnFnWKuCneoloMjkMX1Vp9ze9mDotJRYW/V7pl" crossorigin="anonymous">`,
+        script: `&lt;script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@v0.1.0/docs/assets/js/penli.js" integrity="sha384-6GB9pDB7DxtD1CZ79tt+1TAP3tE1lKK7rl1LYIdPG+UQoM8hF9am8LyycPr3LEcY" crossorigin="anonymous"></script>`,
+        choose: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@v0.1.0/docs/assets/css/penli.theme.css" integrity="sha384-nl6/Lh/Xw3rO6POLQG2zOMEfA1dT9CpyY5tSuYKwkiseQmpZqWzd/8ka8N8KSLOk" crossorigin="anonymous">`,
     }
 };
 
