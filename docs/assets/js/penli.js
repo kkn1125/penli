@@ -8,7 +8,7 @@
 
 const version = {
     text: `<div class="blockquote blockquote-warning">
-        v0.1.1입니다. 자세한 업데이트 내역은 <a href="https://github.com/kkn1125/penli#penli">링크</a>를 참조해주세요.
+        vPlace입니다. 자세한 업데이트 내역은 <a href="https://github.com/kkn1125/penli#penli">링크</a>를 참조해주세요.
         </div>`,
     v011: {
         css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv011/docs/assets/css/penli.css" integrity="sha384-7g0/efyrHKhHd4fpNcPfU698cG0Od+1MredmVZ2anqBQf/QA3gkvapp1CuOLARvY" crossorigin="anonymous">`,
@@ -94,7 +94,7 @@ function settingHandler() {
 
     if(document.querySelectorAll('code[data-code]'))
     document.querySelectorAll('code[data-code]').forEach(createCodeBox);
-    selVersion.addEventListener('change', createCodeWrap.bind(this, selVersion.value));
+    selVersion.addEventListener('change', createCodeWrap.bind(this, selVersion));
 
     document.documentElement.lang = navigator.language.split('-').shift();
 }
@@ -165,20 +165,19 @@ function popLeaveHandler(st, ev){
     st.remove();
 }
 
-createCodeWrap(selVersion.value);
+createCodeWrap(selVersion);
 
 function createCodeWrap(vs){
-    if(verText.innerHTML.trim().length==0){
-        verText.innerHTML = version['text'];
-    }
+    verText.innerHTML = '';
+    verText.innerHTML = version['text'].replace('vPlace', vs.value.charAt(0)+vs.value.slice(1).split('').join('.'));
     vresult.innerHTML = '';
-    for(let ver in version[vs]){
+    for(let ver in version[vs.value]){
         let wrap = document.createElement('div');
         wrap.classList.add('code-wrap');
         
         let div = document.createElement('div');
         let ta = document.createElement('textarea');
-        ta.value = version[vs][ver];
+        ta.value = version[vs.value][ver];
         div.classList.add('card','border','border-light');
         div.dataset.code="html";
         div.dataset.copyable="true";
