@@ -41,25 +41,32 @@ window.addEventListener('load', loadHandler);
 function loadHandler(){
     if(document.querySelectorAll('code[data-code]'))
     document.querySelectorAll('code[data-code]').forEach(createCodeBox);
+    if(selVersion && verText)
     selVersion.addEventListener('change', createCodeWrap.bind(this, selVersion));
 }
 
 for(let ver in version){
     let option = document.createElement('option');
     if(ver.match(/v/gm)){
-        option.innerHTML = ver.charAt(0)+ver.slice(1).split('').join('.');
+        option.innerHTML = ver.charAt(0)+ver.slice(1).replace(/[0-9]+/, x=>{
+            return x.split('').join('.');
+        });
     } else {
         continue;
     }
     option.value = ver;
+    if(selVersion)
     selVersion.append(option);
 }
 
+if(selVersion && verText)
 createCodeWrap(selVersion);
 
 function createCodeWrap(vs){
     verText.innerHTML = '';
-    verText.innerHTML = version['text'].replace('vPlace', vs.value.charAt(0)+vs.value.slice(1).split('').join('.'));
+    verText.innerHTML = version['text'].replace('vPlace', vs.value.charAt(0)+vs.value.slice(1).replace(/[0-9]+/, x=>{
+        return x.split('').join('.');
+    }));
     vresult.innerHTML = '';
     for(let ver in version[vs.value]){
         let wrap = document.createElement('div');
