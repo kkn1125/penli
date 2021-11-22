@@ -1,7 +1,7 @@
 /**!
- * withMe v0.1.1 (https://github.com/ohoraming/withMe)
- * Copyright 2021 Authors (https://github.com/ohoraming/withMe/graphs/contributors) kkn1125, ohoraming
- * Licensed under MIT (https://github.com/ohoraming/withMe/blob/main/LICENSE)
+ * penli v0.1.2 (https://github.com/kkn1125/penli)
+ * Copyright 2021 Authors (https://github.com/kkn1125/penli/graphs/contributors) kkn1125
+ * Licensed under MIT (https://github.com/kkn1125/penli/blob/main/LICENSE)
  */
 
 'use strict';
@@ -10,6 +10,11 @@ const version = {
     text: `<div class="blockquote blockquote-warning">
         vPlace입니다. 자세한 업데이트 내역은 <a href="https://github.com/kkn1125/penli#penli">링크</a>를 참조해주세요.
         </div>`,
+    v012: {
+        css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv011/docs/assets/css/penli.css" integrity="sha384-7g0/efyrHKhHd4fpNcPfU698cG0Od+1MredmVZ2anqBQf/QA3gkvapp1CuOLARvY" crossorigin="anonymous">`,
+        script: `&lt;script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv011/docs/assets/js/penli.js" integrity="sha384-bOlrIoinKrqWcJ4ljPpn6qhrNhx9Yjs450HtZQSygtC/MFzf9I9uFxBPF9WUWXdm" crossorigin="anonymous"></script>`,
+        choose: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv011/docs/assets/css/penli.theme.css" integrity="sha384-24AgJQuKIw8eeQ18Xoo+5gC5yMAXvpYZ6GSKxn6p66OEv05NM5NupqF3+H+9ki9k" crossorigin="anonymous">`,
+    },
     v011: {
         css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv011/docs/assets/css/penli.css" integrity="sha384-7g0/efyrHKhHd4fpNcPfU698cG0Od+1MredmVZ2anqBQf/QA3gkvapp1CuOLARvY" crossorigin="anonymous">`,
         script: `&lt;script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv011/docs/assets/js/penli.js" integrity="sha384-bOlrIoinKrqWcJ4ljPpn6qhrNhx9Yjs450HtZQSygtC/MFzf9I9uFxBPF9WUWXdm" crossorigin="anonymous"></script>`,

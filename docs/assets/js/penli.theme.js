@@ -1,7 +1,7 @@
 /**!
- * withMe v0.1.1 (https://github.com/ohoraming/withMe)
- * Copyright 2021 Authors (https://github.com/ohoraming/withMe/graphs/contributors) kkn1125, ohoraming
- * Licensed under MIT (https://github.com/ohoraming/withMe/blob/main/LICENSE)
+ * penli v0.1.1 (https://github.com/kkn1125/penli)
+ * Copyright 2021 Authors (https://github.com/kkn1125/penli/graphs/contributors) kkn1125
+ * Licensed under MIT (https://github.com/kkn1125/penli/blob/main/LICENSE)
  */
 
 const KEY = 'Gt5Gap%2FfosnAgnq2TqWCo8Jz1N8Gz%2ByDLIKAYJ1Yi%2ByBzDaA88sc6y7NLfblGtfhLkN4htmTfErFloQxDoFsxQ%3D%3D';
