@@ -1,3 +1,9 @@
+/**!
+ * penli v0.1.2-alpha (https://github.com/kkn1125/penli)
+ * Copyright 2021 Authors (https://github.com/kkn1125/penli/graphs/contributors) kkn1125
+ * Licensed under MIT (https://github.com/kkn1125/penli/blob/main/LICENSE)
+ */
+
 'use strict';
 
 const version = {
