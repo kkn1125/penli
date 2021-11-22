@@ -41,6 +41,17 @@ const sides = [...document.querySelectorAll('[data-target]')];
 window.addEventListener('load', settingHandler);
 window.addEventListener('click', sideMenuHandler);
 
+for(let ver in version){
+    let option = document.createElement('option');
+    if(ver.match(/v/gm)){
+        option.innerHTML = ver.charAt(0)+ver.slice(1).split('').join('.');
+    } else {
+        continue;
+    }
+    option.value = ver;
+    selVersion.append(option);
+}
+
 for(let btn of menuBtns){
     btn.querySelector('button[data-target]').addEventListener('click', menuBtnHandler);
 }
