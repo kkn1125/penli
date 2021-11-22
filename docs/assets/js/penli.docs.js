@@ -11,9 +11,9 @@ const version = {
         vPlace입니다. 자세한 업데이트 내역은 <a href="https://github.com/kkn1125/penli#penli">링크</a>를 참조해주세요.
         </div>`,
     v012alpha: {
-        css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv012/docs/assets/css/penli.css" integrity="sha384-L7qT12zYsDBUiV+8U7uCJrpx3UT0wr4VxIAih486VTWTiHAOgFwk+7OnnYV++heZ" crossorigin="anonymous">`,
-        script: `&lt;script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv012/docs/assets/js/penli.js" integrity="sha384-BY7Ct7YPFeeCPykwI+FfZLBVK1ZJzAAX/INYUeCd3dAl/0+AA4l8mT92gJbpUHVr" crossorigin="anonymous"></script>`,
-        choose: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv012/docs/assets/css/penli.theme.css" integrity="sha384-Jv/NT2IiEq6/L1Ga2uIHW98mjH9KTr9eue62F+o9ikMp4R1bY/7Btfm/wKmhOFHS" crossorigin="anonymous">`,
+        css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv012alpha/docs/assets/css/penli.css" integrity="sha384-W6LYuweECDLVttO+sXMbUrC08K4wipi2xew2tCg5oDtsCoYyGss+kGVFE/1YmR0e" crossorigin="anonymous">`,
+        script: `&lt;script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv012alpha/docs/assets/js/penli.js" integrity="sha384-v092hQzYiAjZ8CmLjYIvwr6bO3OnvXutDanly9WXVjX0TPLofgv01rcexjRXpdm2" crossorigin="anonymous"></script>`,
+        choose: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv012alpha/docs/assets/css/penli.theme.css" integrity="sha384-ghvegK2uZphn4gtQdfs4LiVaMmsHSoA6Cg86qGwCaKAjhn+NBP2HjtPfww4OyOSn" crossorigin="anonymous">`,
     },
     v012: {
         css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv012/docs/assets/css/penli.css" integrity="sha384-L7qT12zYsDBUiV+8U7uCJrpx3UT0wr4VxIAih486VTWTiHAOgFwk+7OnnYV++heZ" crossorigin="anonymous">`,
