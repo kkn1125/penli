@@ -57,6 +57,12 @@ function sideMenuHandler(ev) {
     }
 }
 
+if(getEventListeners(window).load.length==0){
+    setTimeout(()=>{
+         sideMenuHandler();
+    }, 500);
+}
+
 function settingHandler() {
     let target = document.querySelectorAll('.side-bar');
     if(!target) return;
