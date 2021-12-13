@@ -58,7 +58,7 @@ function sideMenuHandler(ev) {
 }
 
 setTimeout(()=>{
-        sideMenuHandler();
+    settingHandler();
 }, 500);
 
 function settingHandler() {
