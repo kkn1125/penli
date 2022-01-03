@@ -11,9 +11,61 @@ const rsb = document.querySelector('#rsb');
 
 let limit = 5;
 
+function checkVersion(){
+    const penli = performance.getEntries().filter(({entryType, initiatorType, name})=>{
+        if(entryType == 'resource' && initiatorType.match(/script|css/gim) && name.split('/').pop().split('.').shift().match(/penli/gim)) return true;
+    });
+    fetch(penli[0].name).then(response=>response.text())
+    .then(data=>{
+        let nowVer = data.match(/\/\*\*\!\s*[\s\S]+?\s*\*\//gim)[0].match(/v[0-9\.]+/gim)[0];
+        // SelectMenu-item
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://cdn.jsdelivr.net/gh/kkn1125/penli@latest/docs/assets/js/penli.docs.js')}`)
+        .then(response => {
+            if (response.ok) return response.json()
+            throw new Error('Network response was not ok.')
+        })
+        .then(data => {
+            let newVer = data.contents.match(/\/\*\*\!\s*[\s\S]+?\s*\*\//gim)[0].match(/v[0-9\.]+/gim)[0];
+            let valid_nowVer = parseInt(nowVer.replace(/[^0-9]/gim,''));
+            let valid_newVer = parseInt(newVer.replace(/[^0-9]/gim,''));
+            if(newVer != nowVer && valid_newVer >= valid_nowVer){
+                console.warn('[Penli Ver] 새로운 버전이 나왔습니다. 현재 버전 알림은 v0.2.0부터 내장되어 제공됩니다. 알람을 차단하시려면 checkVersion메서드에 false를 인자로 주어야 합니다.');
+            } else {
+                console.warn('[Penli Ver] 최신 버전입니다.');
+            }
+        });
+    })
+}
+
 // left-side-bar handler
 window.addEventListener('load', settingHandler);
 window.addEventListener('click', sideMenuHandler);
+
+function checkVersion(){
+    const penli = performance.getEntries().filter(({entryType, initiatorType, name})=>{
+        if(entryType == 'resource' && initiatorType.match(/script|css/gim) && name.split('/').pop().split('.').shift().match(/penli/gim)) return true;
+    });
+    fetch(penli[0].name).then(response=>response.text())
+    .then(data=>{
+        let nowVer = data.match(/\/\*\*\!\s*[\s\S]+?\s*\*\//gim)[0].match(/v[0-9\.]+/gim)[0];
+        // SelectMenu-item
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://cdn.jsdelivr.net/gh/kkn1125/penli@latest/docs/assets/js/penli.docs.js')}`)
+        .then(response => {
+            if (response.ok) return response.json()
+            throw new Error('Network response was not ok.')
+        })
+        .then(data => {
+            let newVer = data.contents.match(/\/\*\*\!\s*[\s\S]+?\s*\*\//gim)[0].match(/v[0-9\.]+/gim)[0];
+            let valid_nowVer = parseInt(nowVer.replace(/[^0-9]/gim,''));
+            let valid_newVer = parseInt(newVer.replace(/[^0-9]/gim,''));
+            if(newVer != nowVer && valid_newVer >= valid_nowVer){
+                console.warn('[Penli Ver] 새로운 버전이 나왔습니다. 현재 버전 알림은 v0.2.0부터 내장되어 제공됩니다. 알람을 차단하시려면 checkVersion메서드에 false를 인자로 주어야 합니다.');
+            } else {
+                console.warn('[Penli Ver] 최신 버전입니다.');
+            }
+        });
+    })
+}
 
 function menuBtnHandler(ev){
     const gnbInner = document.querySelector('.gnb-inner');
@@ -85,6 +137,7 @@ function settingHandler() {
         });
 
         document.documentElement.lang = navigator.language.split('-').shift();
+        checkVersion();
     }
 }
 

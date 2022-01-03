@@ -48,53 +48,25 @@ const vresult = document.getElementById('vresult');
 
 window.addEventListener('load', loadHandler);
 
-function checkVersion(){
-    const penli = performance.getEntries().filter(({entryType, initiatorType, name})=>{
-        if(entryType == 'resource' && initiatorType.match(/script|css/gim) && name.split('/').pop().split('.').shift().match(/penli/gim)) return true;
-    });
-    fetch(penli[0].name).then(response=>response.text())
-    .then(data=>{
-        let nowVer = data.match(/\/\*\*\!\s*[\s\S]+?\s*\*\//gim)[0].match(/v[0-9\.]+/gim)[0];
-        // SelectMenu-item
-        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://cdn.jsdelivr.net/gh/kkn1125/penli@latest/docs/assets/js/penli.docs.js')}`)
-        .then(response => {
-            if (response.ok) return response.json()
-            throw new Error('Network response was not ok.')
-        })
-        .then(data => {
-            let newVer = data.contents.match(/\/\*\*\!\s*[\s\S]+?\s*\*\//gim)[0].match(/v[0-9\.]+/gim)[0];
-            let valid_nowVer = parseInt(nowVer.replace(/[^0-9]/gim,''));
-            let valid_newVer = parseInt(newVer.replace(/[^0-9]/gim,''));
-            if(newVer != nowVer && valid_newVer >= valid_nowVer){
-                console.warn('[Penli Ver] 새로운 버전이 나왔습니다. 현재 버전 알림은 v0.2.0부터 내장되어 제공됩니다. 알람을 차단하시려면 checkVersion메서드에 false를 인자로 주어야 합니다.');
-            } else {
-                console.warn('[Penli Ver] 최신 버전입니다.');
-            }
-        });
-    })
-}
-
 function loadHandler(){
     if(document.querySelectorAll('code[data-code]'))
     document.querySelectorAll('code[data-code]').forEach(createCodeBox);
     if(selVersion && verText)
     selVersion.addEventListener('change', createCodeWrap.bind(this, selVersion));
 
-    checkVersion();
-}
-
-for(let ver in version){
-    let option = document.createElement('option');
-    if(ver.match(/v/gm)){
-        option.innerHTML = ver.charAt(0)+ver.slice(1).replace(/[0-9]+/, x=>{
-            return x.split('').join('.');
-        });
-    } else {
-        continue;
+    for(let ver in version){
+        let option = document.createElement('option');
+        if(ver.match(/v/gm)){
+            option.innerHTML = ver.charAt(0)+ver.slice(1).replace(/[0-9]+/, x=>{
+                return x.split('').join('.');
+            });
+        } else {
+            continue;
+        }
+        option.value = ver;
+        if(selVersion)
+        selVersion.append(option);
     }
-    option.value = ver;
-    if(selVersion)
-    selVersion.append(option);
 }
 
 if(selVersion && verText)
