@@ -69,8 +69,10 @@ function loadHandler(){
     }
 }
 
-if(selVersion && verText)
-createCodeWrap(selVersion);
+setTimeout(()=>{
+    if(selVersion && verText)
+    createCodeWrap(selVersion);
+}, 100);
 
 function createCodeWrap(vs){
     verText.innerHTML = '';
