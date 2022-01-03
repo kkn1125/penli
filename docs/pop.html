@@ -16,10 +16,7 @@
         <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
         <link rel="manifest" href="/manifest.json">
-
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+        
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,10 +29,7 @@
             rel="stylesheet">
         <link rel="stylesheet" href="assets/css/penli.css">
         <link rel="stylesheet" href="assets/css/penli.theme.css">
-        <script type="module">
-            import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
-        </script>
-        <title>Penli</title>
+        <title>Penli : Pop Up</title>
     </head>
 
     <body>
@@ -109,7 +103,7 @@
                             <li class="list-item">
                                 <a href="button.html">Button</a>
                             </li>
-                            <li class="list-item">
+                            <li class="list-item active">
                                 <a href="pop.html">Pop up</a>
                             </li>
                             <li class="list-item">
@@ -126,52 +120,58 @@
                 <section class="fence-full">
                     <div class="">
                         <span class="h2">
-                            Penli Docs
+                            Pop Up
                         </span>
-                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="현재 버전은 v0.1.2-beta입니다.">
+                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="리스트를 간편하게 만들어 줍니다.">
                             ?
                         </span>
                     </div>
-                </section>
 
-                <div class="sr"></div>
-
-                <section class="fence-full" style="position: relative; min-height: 25rem; background-image: url(assets/images/bg01.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-                    <img class="pe-none us-none" data-ani="human" src="assets/images/people01.png" alt="" style="height: 7em; filter: invert(); opacity: 0.7; bottom:0; position: absolute; left: 50%;" draggable="false">
-                    <div class="w-flex">
-                        <span class="col-15 h5 text-white" style="line-height: 1.5em">
-                            Penli는 Bootstrap의 네이밍에 기초합니다. 네이밍 외 속성 설정은 재량으로 한 것 임을 알립니다.
+                    <div class="">
+                        <span class="h5">
+                            사용법
                         </span>
                     </div>
-                    <div class="btn-bundle">
-                        <button class="btn btn-frame-success">Install</button>
-                        <button class="btn btn-frame-warning">Docs</button>
+
+                    <div class="sr"></div>
+                    
+                    <div class="fs-4 fw-bold">Pop Up Basic</div>
+                    <div class="pl-ex">
+                        <div>
+                            <span class="h3">Penli Pop up</span>
+                            <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="리스트를 간편하게 만들어 줍니다.">?</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cupiditate, adipisci doloremque saepe inventore quo libero quia eius dignissimos placeat soluta! Perspiciatis fugit autem libero a esse accusantium enim nihil!</p>
                     </div>
-                </section>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div>
+                                <span class="h3">Penli Pop up</span>
+                                <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="리스트를 간편하게 만들어 줍니다.">?</span>
+                            </div>
+                            <p>...</p>
+                        </code>
+                    </div>
+
+                    <div class="sr"></div>
+
+                    <div class="fs-4 fw-bold">Pop Direction</div>
+                    <div class="pl-ex">
+                        <span class="tag tag-dark" data-pop-type="msg" data-msg-dir="start" data-msg="왼쪽으로 설정">왼쪽</span>
+                        <span class="tag tag-dark" data-pop-type="msg" data-msg-dir="top" data-msg="위쪽으로 설정">위쪽</span>
+                        <span class="tag tag-dark" data-pop-type="msg" data-msg-dir="bottom" data-msg="아래쪽으로 설정">아래쪽</span>
+                        <span class="tag tag-dark" data-pop-type="msg" data-msg-dir="end" data-msg="오른쪽으로 설정">오른쪽</span>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <span class="tag tag-dark" data-pop-type="msg" data-msg-dir="start" data-msg="왼쪽으로 설정">왼쪽</span>
+                            <span class="tag tag-dark" data-pop-type="msg" data-msg-dir="top" data-msg="위쪽으로 설정">위쪽</span>
+                            <span class="tag tag-dark" data-pop-type="msg" data-msg-dir="bottom" data-msg="아래쪽으로 설정">아래쪽</span>
+                            <span class="tag tag-dark" data-pop-type="msg" data-msg-dir="end" data-msg="오른쪽으로 설정">오른쪽</span>
+                        </code>
+                    </div>
 
                 <div class="sr"></div>
-
-                <section class="fence-full">
-                    <span class="h5">
-                        CDN
-                    </span>
-                    <div class="blockquote blockquote-warning">
-                        코드를 클릭하시면 자동으로 복사됩니다.
-                    </div>
-                   
-                    <span class="h6">
-                        Select Version
-                        <select id="version" class="form-select">
-                        </select>
-                    </span>
-                    <div id="verText"></div>
-                    <div id="vresult">
-
-                    </div>
-
-                </section>
-                <div class="sr"></div>
-                
             </main>
 
             <!-- right side bar -->
@@ -210,7 +210,7 @@
 
         <footer class="footer bg-light p-3 w-flex fustify-content-start">
             <span class="brand text-white fw-bold">
-                <a href="index.html">Penli</a>
+                <a href="/index.html">Penli</a>
             </span>
             <div class="w-flex justify-content-start ps-3 gx-3">
                 <div><a href="https://kkn1125.github.io/typer/" class="nav-link">type</a></div>

@@ -1,5 +1,5 @@
 /**!
- * penli v0.1.3 (https://github.com/kkn1125/penli)
+ * penli v0.2.0 (https://github.com/kkn1125/penli)
  * Copyright 2021 Authors (https://github.com/kkn1125/penli/graphs/contributors) kkn1125
  * Licensed under MIT (https://github.com/kkn1125/penli/blob/main/LICENSE)
  */
@@ -10,6 +10,11 @@ const version = {
     text: `<div class="blockquote blockquote-warning">
         vPlace입니다. 자세한 업데이트 내역은 <a href="https://github.com/kkn1125/penli#penli">링크</a>를 참조해주세요.
         </div>`,
+    v020: {
+        css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv020/docs/assets/css/penli.css" integrity="sha384-9rdE3UnEE/uO/9YRo4rMRsBynA9KU3Pn8NQQNoHiCQD0EEXs6PPcf/LbvCxQ4vse" crossorigin="anonymous">`,
+        script: `&lt;script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv020/docs/assets/js/penli.js" integrity="sha384-nsIRFRt8WvtPsJBMOSiAzsvqgVc0ViFiMC80JMDsPiz6LnNXgOzelTajC1MhBm41" crossorigin="anonymous"></script>`,
+        choose: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv020/docs/assets/css/penli.theme.css" integrity="sha384-d4ynKiIjhKoiJJWEuY6FBHRZbXqkWYLqz6mNMQzLtDorPEvdDAFFzf4EIMIgqswz" crossorigin="anonymous">`,
+    },
     v013: {
         css: `&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv013/docs/assets/css/penli.css" integrity="sha384-9rdE3UnEE/uO/9YRo4rMRsBynA9KU3Pn8NQQNoHiCQD0EEXs6PPcf/LbvCxQ4vse" crossorigin="anonymous">`,
         script: `&lt;script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv013/docs/assets/js/penli.js" integrity="sha384-nsIRFRt8WvtPsJBMOSiAzsvqgVc0ViFiMC80JMDsPiz6LnNXgOzelTajC1MhBm41" crossorigin="anonymous"></script>`,
@@ -43,11 +48,39 @@ const vresult = document.getElementById('vresult');
 
 window.addEventListener('load', loadHandler);
 
+function checkVersion(){
+    const penli = performance.getEntries().filter(({entryType, initiatorType, name})=>{
+        if(entryType == 'resource' && initiatorType.match(/script|css/gim) && name.split('/').pop().split('.').shift().match(/penli/gim)) return true;
+    });
+    fetch(penli[0].name).then(response=>response.text())
+    .then(data=>{
+        let nowVer = data.match(/\/\*\*\!\s*[\s\S]+?\s*\*\//gim)[0].match(/v[0-9\.]+/gim)[0];
+        // SelectMenu-item
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://cdn.jsdelivr.net/gh/kkn1125/penli@latest/docs/assets/js/penli.docs.js')}`)
+        .then(response => {
+            if (response.ok) return response.json()
+            throw new Error('Network response was not ok.')
+        })
+        .then(data => {
+            let newVer = data.contents.match(/\/\*\*\!\s*[\s\S]+?\s*\*\//gim)[0].match(/v[0-9\.]+/gim)[0];
+            let valid_nowVer = parseInt(nowVer.replace(/[^0-9]/gim,''));
+            let valid_newVer = parseInt(newVer.replace(/[^0-9]/gim,''));
+            if(newVer != nowVer && valid_newVer >= valid_nowVer){
+                console.warn('[Penli Ver] 새로운 버전이 나왔습니다. 현재 버전 알림은 v0.2.0부터 내장되어 제공됩니다. 알람을 차단하시려면 checkVersion메서드에 false를 인자로 주어야 합니다.');
+            } else {
+                console.warn('[Penli Ver] 최신 버전입니다.');
+            }
+        });
+    })
+}
+
 function loadHandler(){
     if(document.querySelectorAll('code[data-code]'))
     document.querySelectorAll('code[data-code]').forEach(createCodeBox);
     if(selVersion && verText)
     selVersion.addEventListener('change', createCodeWrap.bind(this, selVersion));
+
+    checkVersion();
 }
 
 for(let ver in version){
@@ -96,6 +129,9 @@ function createCodeBox(code){
     let lines = code.innerHTML.split('\n');
     lines.shift();
     let indent = 0;
+    let ta = document.createElement('textarea');
+    let pre = document.createElement('pre');
+    // let codes = document.createElement('code');
 
     for(let line of lines[0].split('')){
         if(line==' '){
@@ -104,14 +140,13 @@ function createCodeBox(code){
             break;
         }
     }
-
+    
     lines = lines.map(line=>{
         let regex = `\\s{${indent}}`;
         let lineAtStart = line.replace(new RegExp(regex,'g'), '');
         return lineAtStart;
     });
 
-    let ta = document.createElement('textarea');
     ta.value = lines.join('\n');
     let changeTag = document.createElement('div');
     let attrs = code.getAttributeNames();
@@ -126,6 +161,7 @@ function createCodeBox(code){
     changeTag.style.cssText = `--pl-code-type: "${type}"`;
     let copyType = type;
     changeTag.innerText = ta.value.trim().replace('&lt;', '\<').replace('&gt;', '\>');
+
     code.insertAdjacentElement('beforebegin', changeTag);
     code.remove();
     window.addEventListener('click', copyHandler.bind(changeTag, copyType));

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/penli.css">
+        <link rel="stylesheet" href="assets/css/penli.theme.css">
+        <title>Penli : Notice</title>
+    </head>
+
+    <body>
+        <nav class="gnb position-sticky bg-light us-none gnb-dark">
+            <div class="gnb-inner gnb-expand-md hide align-items-center">
+                <div class="brand fw-bold">
+                    <a href="index.html">Penli</a>
+                </div>
+                <div class="menu-btn">
+                    <button class="btn btn-light text-gray fs-4" data-target="#gnbMenu" style="line-height: 1">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <ul id="gnbMenu" class="gnb-menu vgap-3 w-flex">
+                    <li>
+                        <a class="nav-link" href="index.html">Docs</a>
+                    </li>
+                    <li class="search btn-bundle g-0">
+                        <input type="text" class="form-input col">
+                        <button class="btn btn-info">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- control bar -->
+        <section class="bg-light" style="z-index: 1170;position: relative;">
+            <div class="w-flex g-3">
+                <div class="col-10 text-start">
+                    <div class="btn text-dark btn-focus-gray pe-none" data-target="#lsb">
+                        <i class="fas fa-bars"></i> Usage
+                    </div>
+                </div>
+                <div class="col-10 text-end">
+                    <button class="btn text-dark btn-focus-gray" data-target="#rsb">
+                        <i class="fas fa-bars"></i> Menu
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- main area -->
+        <div class="main">
+            <!-- left side bar -->
+            <aside id="lsb" class="side-bar hide" data-side-bar="left">
+                <div class="p-5 border flex-basis-100">
+                    <div class="position-static position-sticky-sm">
+                        <div class="menu-title text-uppercase mb-5 text-muted">
+                            usage
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-item">
+                                <a href="display.html">Display</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="sizing.html">Sizing</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="position.html">Position</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="card.html">Card</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="area.html">Area Fence</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="list.html">List</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="button.html">Button</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="pop.html">Pop up</a>
+                            </li>
+                            <li class="list-item active">
+                                <a href="notice.html">Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <!-- left side bar -->
+
+            <main>
+                <div class="sr"></div>
+                <section class="fence-full">
+                    <div class="">
+                        <span class="h2">
+                            Notice
+                        </span>
+                        <span class="us-none tag tag-danger" data-pop-type="msg" data-msg-dir="end" data-msg="알림 글에 적합한 용도로 사용됩니다.">
+                            ?
+                        </span>
+                    </div>
+
+                    <div class="">
+                        <span class="h5">
+                            사용법
+                        </span>
+                    </div>
+
+                    <div class="sr"></div>
+                    
+                    <div class="fs-4 fw-bold">Notice Basic</div>
+                    <div class="pl-ex">
+                        <div>
+                            <span class="h3">Test Notice</span>
+                        </div>
+                        <div class="notice">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="notice">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                        </code>
+                    </div>
+
+                    <div class="sr"></div>
+
+                    <div class="fs-4 fw-bold">Notice Colors</div>
+                    <div class="pl-ex">
+                        <div class="notice notice-info">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                        <div class="notice notice-primary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                        <div class="notice notice-secondary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                        <div class="notice notice-brand">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                        <div class="notice notice-danger">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                        <div class="notice notice-warning">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                        <div class="notice notice-dark">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                        <div class="notice notice-light">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                        <div class="notice notice-gray">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                        <div class="notice notice-white">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                        
+                        <div class="notice notice-ghost" style="background-image: url(https://picsum.photos/500/200); background-repeat: no-repeat; background-size: cover;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore soluta nobis tenetur libero provident adipisci natus doloremque numquam quasi sint dignissimos veniam repudiandae, sunt dolorem. Omnis culpa ipsam ipsa!
+                            <span class="notice-foot">
+                                kimson
+                            </span>
+                        </div>
+                    </div>
+                    <div class="code-wrap">
+                        <code data-code="html" data-copyable="true" class="card border border-light">
+                            <div class="notice notice-info">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                            <div class="notice notice-primary">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                            <div class="notice notice-secondary">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                            <div class="notice notice-brand">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                            <div class="notice notice-danger">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                            <div class="notice notice-warning">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                            <div class="notice notice-dark">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                            <div class="notice notice-light">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                            <div class="notice notice-gray">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                            <div class="notice notice-white">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                            
+                            <div class="notice notice-ghost">
+                                ...
+                                <span class="notice-foot">
+                                    kimson
+                                </span>
+                            </div>
+                        </code>
+                    </div>
+
+                <div class="sr"></div>
+            </main>
+
+            <!-- right side bar -->
+            <aside id="rsb" class="side-bar built-in hide" data-side-bar="right">
+                <div class="p-5 border flex-basis-100">
+                    <div class="position-sticky">
+                        <div class="menu-title text-uppercase mb-5 text-muted">
+                            menu
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-item">
+                                <a href="index.html">home</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="https://kkn1125.github.io/contact">mail to</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="https://kkn1125.github.io/">dev blog</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="https://kkn1125.github.io/typer/">typer</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="https://kkn1125.github.io/mkDocumentifyJS/">documentify</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="https://github.com/kkn1125/penli#penli">about</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <!-- right side bar -->
+        </div>
+
+
+        <footer class="footer bg-light p-3 w-flex fustify-content-start">
+            <span class="brand text-white fw-bold">
+                <a href="/index.html">Penli</a>
+            </span>
+            <div class="w-flex justify-content-start ps-3 gx-3">
+                <div><a href="https://kkn1125.github.io/typer/" class="nav-link">type</a></div>
+                <div><a href="https://kkn1125.github.io/mkDocumentifyJS/" class="nav-link">documentify</a></div>
+            </div>
+        </footer>
+
+        <script src="assets/js/penli.docs.js"></script>
+        <script src="assets/js/penli.js"></script>
+    </body>
+
+</html>
